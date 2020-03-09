@@ -40,6 +40,13 @@ class detailController extends Controller
         $detail->idproduct = $request->idproduct;
         $detail->content = $request->content;
         $detail->contentkd = str::slug($request->content);
+        $detail->step = $request->step;
+        $detail->img1 = $request->image1;
+        $detail->img2 = $request->image2;
+        $detail->img3 = $request->image3;
+        $detail->img4 = $request->image4;
+        $detail->img5 = $request->image5;
+        $detail->img6 = $request->image6;
         $detail->save();
 
         return redirect('admin/detail/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 

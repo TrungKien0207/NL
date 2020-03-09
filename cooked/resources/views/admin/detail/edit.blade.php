@@ -6,12 +6,12 @@
 	    <div class="container-fluid">
 	        <div class="row">
 	            <div class="col-lg-12">
-	                <h1 class="page-header">Thời gian
-	                    <small>{{ isset( $spice->name ) ? $spice->name  : ''}}</small>
+	                <h1 class="page-header">Chi tiết
+	                    <small>{{ isset( $detail->name ) ? $detail->name  : ''}}</small>
 	                </h1>
 	            </div>
 	            <!-- /.col-lg-12 -->
-	            <div class="col-lg-7" style="padding-bottom:120px">
+	            <div class="col-lg-12" style="padding-bottom:120px">
 	            	@if(count($errors) > 0)
 						<div class="alert alert-danger">
 							@foreach($errors->all() as $err)
@@ -26,25 +26,62 @@
 						</div>
 					@endif
 					
-	                <form action="admin/timeCook/edit/{{$timeCook->id}}" method="POST">
+	                <form action="admin/detail/edit/{{$detail->id}}" method="POST">
 	                	<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
 	                	{{csrf_field()}} <!-- có dòng này mới được submit -->
 
 	                	<div class="form-group">
 	                        <label><h4>Món ăn</h4></label>
-	                        <select class="form-control" name="idProD" placeholder="Nhập tên món ăn" value="{{old('idPD',isset($timeCook->idPD) ? $timeCook->idPD : '')}}">
+	                        <select class="form-control" name="idproduct" placeholder="Nhập tên món ăn" value="{{old('idproduct',isset($detail->idproduct) ? $detail->idproduct : '')}}">
 	                        	<option value="">Món ăn</option>
 				                @if(isset($product))
 				                    @foreach($product as $pro)
-				   						<option value="{{$pro->id}}" {{old('idProD',isset($timeCook->idProD) ? $timeCook->idProD : '') == ($pro->id) ? 'selected' : ''}}>{{$pro->ten_sp}}</option>
+				   						<option value="{{$pro->id}}" {{old('idproduct',isset($detail->idproduct) ? $detail->idproduct : '') == ($pro->id) ? 'selected' : ''}}>{{$pro->ten_sp}}</option>
 				                    @endforeach
 				                @endif
 	                        </select>
 	                    </div>
 
 	                    <div class="form-group">
-	                        <label>Tên món ăn</label>
-	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('t_ten',isset($timeCook->t_ten) ? $timeCook->t_ten : '')}}" />
+	                        <label>Nội dung món ăn</label>
+	                        <input class="form-control" name="content" placeholder="Nhập tên loại món ăn" value="{{old('content',isset($detail->content) ? $detail->content : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm">
+	                        <label><h4>Bước</h4></label>
+	                        <input class="form-control" name="step" placeholder="Nhập tên gia vị" value="{{old('step',isset($detail->step) ? $detail->step : '')}}" />
+	                    </div>
+
+	                    <div class="row">
+	                    	<div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 1</h4></label>
+	                        <input type="file" class="form-control-file" name="image1" placeholder="Nhập tên gia vị" value="{{old('image1',isset($detail->img1) ? $detail->img1 : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 2</h4></label>
+	                        <input type="file" class="form-control-file" name="image2" placeholder="Nhập tên gia vị" value="{{old('image2',isset($detail->img2) ? $detail->img2 : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 3</h4></label>
+	                        <input type="file" class="form-control-file" name="image3" placeholder="Nhập tên gia vị" value="{{old('image3',isset($detail->img3) ? $detail->img3 : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 4</h4></label>
+	                        <input type="file" class="form-control-file" name="image4" placeholder="Nhập tên gia vị" value="{{old('image4',isset($detail->img4) ? $detail->img4 : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 5</h4></label>
+	                        <input type="file" class="form-control-file" name="image5" placeholder="Nhập tên gia vị" value="{{old('image5',isset($detail->img5) ? $detail->img5 : '')}}" />
+	                    </div>
+
+	                    <div class="form-group col-sm-4">
+	                        <label><h4>Ảnh 6</h4></label>
+	                        <input type="file" class="form-control-file" name="image6" placeholder="Nhập tên gia vị" value="{{old('image6',isset($detail->img6) ? $detail->img6 : '')}}" />
+	                    </div>
 	                    </div>
 
 	                    <button type="submit" class="btn btn-info">Sửa</button>
