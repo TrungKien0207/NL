@@ -88,27 +88,15 @@ Route::group(['prefix'=>'admin'], function() {
 		Route::get('delete/{id}', 'detailController@getDelete');
 	});
 
-	Route::group(['prefix'=>'timeCook'], function() {
-		Route::get('list', 'timeCookController@getList');
+	Route::group(['prefix'=>'users'], function() {
+		Route::get('list', 'usersController@getList');
 		
-		Route::get('edit/{id}', 'timeCookController@getEdit');
-		Route::post('edit/{id}', 'timeCookController@postEdit');
+		Route::get('edit/{id}', 'usersController@getEdit');
+		Route::post('edit/{id}', 'usersController@postEdit');
 
-		Route::get('insert', 'timeCookController@getInsert');
-		Route::post('insert', 'timeCookController@postInsert');
+		Route::get('insert', 'usersController@getInsert');
+		Route::post('insert', 'usersController@postInsert');
 
-		Route::get('delete/{id}', 'timeCookController@getDelete');
-	});
-
-	Route::group(['prefix'=>'timeCook'], function() {
-		Route::get('list', 'timeCookController@getList');
-		
-		Route::get('edit/{id}', 'timeCookController@getEdit');
-		Route::post('edit/{id}', 'timeCookController@postEdit');
-
-		Route::get('insert', 'timeCookController@getInsert');
-		Route::post('insert', 'timeCookController@postInsert');
-
-		Route::get('delete/{id}', 'timeCookController@getDelete');
+		Route::get('delete/{id}', 'usersController@getDelete');
 	});
 });

@@ -6,8 +6,8 @@
 	    <div class="container-fluid">
 	        <div class="row">
 	            <div class="col-lg-12">
-	                <h1 class="page-header">Nguyên liệu
-	                    <small>{{ isset($material->name ) ? $material->name  : ''}}</small>
+	                <h1 class="page-header">Thời gian
+	                    <small>{{ isset( $timeCook->name ) ? $timeCook->name  : ''}}</small>
 	                </h1>
 	            </div>
 	            <!-- /.col-lg-12 -->
@@ -26,17 +26,17 @@
 						</div>
 					@endif
 					
-	                <form action="admin/material/edit/{{$material->id}}" method="POST">
+	                <form action="admin/timeCook/edit/{{$timeCook->id}}" method="POST">
 	                	<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
 	                	{{csrf_field()}} <!-- có dòng này mới được submit -->
 
 	                	<div class="form-group">
-	                        <label><h4>Loại món ăn</h4></label>
-	                        <select class="form-control" name="idProduct" placeholder="Nhập tên món ăn" value="{{old('idProduct',isset($material->idProduct) ? $material->idProduct : '')}}">
-	                        	<option value="">Loại món ăn</option>
+	                        <label><h4>Món ăn</h4></label>
+	                        <select class="form-control" name="idProD" placeholder="Nhập tên món ăn" value="{{old('idPD',isset($timeCook->idPD) ? $timeCook->idPD : '')}}">
+	                        	<option value="">Món ăn</option>
 				                @if(isset($product))
 				                    @foreach($product as $pro)
-				   						<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
+				   						<option value="{{$pro->id}}" {{old('idProD',isset($timeCook->idProD) ? $timeCook->idProD : '') == ($pro->id) ? 'selected' : ''}}>{{$pro->ten_sp}}</option>
 				                    @endforeach
 				                @endif
 	                        </select>
@@ -44,7 +44,7 @@
 
 	                    <div class="form-group">
 	                        <label>Tên món ăn</label>
-	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('r_ten',isset($material->r_ten) ? $material->r_ten : '')}}" />
+	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('t_ten',isset($timeCook->t_ten) ? $timeCook->t_ten : '')}}" />
 	                    </div>
 
 	                    <button type="submit" class="btn btn-info">Sửa</button>

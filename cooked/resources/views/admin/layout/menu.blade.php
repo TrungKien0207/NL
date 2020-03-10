@@ -14,13 +14,13 @@
             <!-- </li> -->
     
             <li>
-                <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-users fa-fw"></i> Người dùng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">List User</a>
+                        <a href="admin/users/list ">Danh sách người dùng</a>
                     </li>
                     <li>
-                        <a href="#">Add User</a>
+                        <a href="admin/users/insert">Thêm người dùng</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

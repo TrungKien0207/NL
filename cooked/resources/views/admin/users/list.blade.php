@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Nguyên liệu
+                <h1 class="page-header">Người dùng
                     <small>Danh sách</small>
                 </h1>
             </div>
@@ -21,24 +21,27 @@
                 <thead>
                     <tr align="center">
                         <th class="text-center">ID</th>
-                        <th class="text-center">ID Món ăn</th>
-                        <th class="text-center">Tên Nguyên liệu</th>
-                        <th class="text-center">Tên không dấu</th>
+                        <th class="text-center">Tên</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Quyền</th>
                         <th class="text-center">Xóa</th>
                         <th class="text-center">Sửa</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($material as $ra)
+                   @foreach($users as $us)
                         <tr class="odd gradeX" align="center">
-                            <td class="bg-info">{{$material->id}}</td>
-                            <td>{{$material->idProduct}}</td>
-                            <td class="bg-info">{{$material->ten_sp}}</td>
-                            <td>{{$material->r_ten}}</td>
-                            <td class="bg-info">{{$material->anh_sp}}</td>
-                            <td>{{$material->r_tenkd}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/material/delete/{{$material->id}}"> Xóa</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/material/edit/{{$material->id}}">Sửa</a></td>
+                            <td>{{ $us->id }}</td>
+                            <td>{{ $us->name }}</td>
+                            <td>{{ $us->email }}</td>
+                            <td>
+                                @if($us->level == 1)
+                                    {{"Amin"}}
+                                @else {{"Người dùng"}}
+                                @endif
+                            </td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/users/delete/{{ $us->id }}"> Xóa</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/users/edit/{{ $us->id }}">Sửa</a></td>
                         </tr>
                     @endforeach
                 </tbody>
