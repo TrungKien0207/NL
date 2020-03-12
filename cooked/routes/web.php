@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'admin'], function() {
+Route::get('admin/login', 'UserController@getLoginAdmin');
+Route::post('admin/login', 'UserController@postLoginAdmin');
+Route::get('admin/logout', 'UserController@getLogoutAdmin');
+
+Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function() {
 	Route::group(['prefix'=>'category'], function() {
 		Route::get('list', 'categoryController@getList');
 		
@@ -88,15 +92,15 @@ Route::group(['prefix'=>'admin'], function() {
 		Route::get('delete/{id}', 'detailController@getDelete');
 	});
 
-	Route::group(['prefix'=>'users'], function() {
-		Route::get('list', 'usersController@getList');
+	Route::group(['prefix'=>'User'], function() {
+		Route::get('list', 'UserController@getList');
 		
-		Route::get('edit/{id}', 'usersController@getEdit');
-		Route::post('edit/{id}', 'usersController@postEdit');
+		Route::get('edit/{id}', 'UserController@getEdit');
+		Route::post('edit/{id}', 'UserController@postEdit');
 
-		Route::get('insert', 'usersController@getInsert');
-		Route::post('insert', 'usersController@postInsert');
+		Route::get('insert', 'UserController@getInsert');
+		Route::post('insert', 'UserController@postInsert');
 
-		Route::get('delete/{id}', 'usersController@getDelete');
+		Route::get('delete/{id}', 'UserController@getDelete');
 	});
 });

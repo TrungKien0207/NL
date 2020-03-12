@@ -17,10 +17,10 @@
                 <a href="#"><i class="fa fa-users fa-fw"></i> Người dùng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="admin/users/list ">Danh sách người dùng</a>
+                        <a href="admin/User/list ">Danh sách người dùng</a>
                     </li>
                     <li>
-                        <a href="admin/users/insert">Thêm người dùng</a>
+                        <a href="admin/User/insert">Thêm người dùng</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
