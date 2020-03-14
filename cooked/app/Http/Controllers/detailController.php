@@ -25,12 +25,11 @@ class detailController extends Controller
         $detail = detail::find($id);
         $this->validate($request, 
             [
-                'content' => 'required|unique:detail,content|min:2',
+                'content' => 'required|min:2',
                 'idproduct' => 'required',
             ], 
             [
                 'content.required' => 'Bạn chưa nhập nội dung món ăn',
-                'content.unique' => 'Nội dung món ăn đã tồn tại',
                 'content.min' => 'Nội dung món ăn phải có tối thiểu 2 kí tự!',
 
                 'idproduct.required' => 'Bạn chưa chọn món ăn',

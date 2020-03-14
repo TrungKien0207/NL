@@ -119,3 +119,4 @@ Route::group(['prefix'=>'admin'], function() {
 
 
 Route::get('homepage', 'PageController@homePage');
+Route::get('product/{slug}-{id}', 'PageController@getListProduct')->name('get.detail.product');
