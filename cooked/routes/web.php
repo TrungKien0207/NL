@@ -8,7 +8,7 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|, 'middleware'=>'adminLogin'
 */
 
 Route::get('/', function () {
@@ -19,7 +19,7 @@ Route::get('admin/login', 'UserController@getLoginAdmin');
 Route::post('admin/login', 'UserController@postLoginAdmin');
 Route::get('admin/logout', 'UserController@getLogoutAdmin');
 
-Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function() {
+Route::group(['prefix'=>'admin'], function() {
 	Route::group(['prefix'=>'category'], function() {
 		Route::get('list', 'categoryController@getList');
 		
@@ -30,6 +30,18 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function() {
 		Route::post('insert', 'categoryController@postInsert');
 
 		Route::get('delete/{id}', 'categoryController@getDelete');
+	});
+
+	Route::group(['prefix'=>'type'], function() {
+		Route::get('list', 'typeController@getList');
+		
+		Route::get('edit/{id}', 'typeController@getEdit');
+		Route::post('edit/{id}', 'typeController@postEdit');
+
+		Route::get('insert', 'typeController@getInsert');
+		Route::post('insert', 'typeController@postInsert');
+
+		Route::get('delete/{id}', 'typeController@getDelete');
 	});
 
 	Route::group(['prefix'=>'product'], function() {
@@ -104,3 +116,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function() {
 		Route::get('delete/{id}', 'UserController@getDelete');
 	});
 });
+
+
+Route::get('homepage', 'PageController@homePage');

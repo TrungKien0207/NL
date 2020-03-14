@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 
 use App\product;
 use App\category;
+use App\type;
 
 class productController extends Controller
 {
@@ -17,8 +18,9 @@ class productController extends Controller
 
     public function getEdit($id) {
         $category = category::select('id','c_ten')->get();
+        $type = type::select('id','ten_ty')->get();
     	$product = product::find($id);
-        return view('admin.product.edit',compact('product', 'category'));
+        return view('admin.product.edit',compact('product', 'category', 'type'));
     }
 
     public function postEdit(Request $request, $id) {
@@ -27,6 +29,8 @@ class productController extends Controller
             [
                 'name' => 'required|unique:product,ten_sp|min:2|max:50',
                 'idCategory' => 'required',
+                'idCategory' => 'required',
+                'idType' => 'required',
                 'content' => 'required|unique:product,content',
                 'img' => 'required|unique:product,anh_sp',
             ], 
@@ -38,6 +42,8 @@ class productController extends Controller
 
                 'idCategory.required' => 'Bạn chưa chọn loại món ăn',
 
+                'idType.required' => 'Bạn chưa chọn loại món ăn tiêu biểu',
+
                 'content.required' => 'Bạn chưa nhập nội dung.',
                 'content.unique' => 'Nội dung món ăn đã tồn tại',
 
@@ -46,6 +52,7 @@ class productController extends Controller
 
             ]);
 
+        $product->idType = $request->idType;
         $product->idCategory = $request->idCategory;
         $product->ten_sp = $request->name;
         $product->anh_sp = $request->img;
@@ -58,14 +65,17 @@ class productController extends Controller
 
     public function getInsert() {
         $category = category::select('id','c_ten')->get();
-    	return view('admin.product.insert',compact('category'));
+        $type = type::select('id','ten_ty')->get();
+    	return view('admin.product.insert',compact('category', 'type'));
     }
 
     public function postInsert(Request $request) {
     	$this->validate($request, 
-    		[
+            [
                 'name' => 'required|unique:product,ten_sp|min:2|max:50',
                 'idCategory' => 'required',
+                'idCategory' => 'required',
+                'idType' => 'required',
                 'content' => 'required|unique:product,content',
                 'img' => 'required|unique:product,anh_sp',
             ], 
@@ -77,6 +87,8 @@ class productController extends Controller
 
                 'idCategory.required' => 'Bạn chưa chọn loại món ăn',
 
+                'idType.required' => 'Bạn chưa chọn loại món ăn tiêu biểu',
+
                 'content.required' => 'Bạn chưa nhập nội dung.',
                 'content.unique' => 'Nội dung món ăn đã tồn tại',
 
@@ -86,12 +98,13 @@ class productController extends Controller
             ]);
 
     	$product = new product;
+        $product->idType = $request->idType;
         $product->idCategory = $request->idCategory;
-    	$product->ten_sp = $request->name;
+        $product->ten_sp = $request->name;
         $product->anh_sp = $request->img;
         $product->content = $request->content;
-    	$product->tenkd = str::slug($request->name);
-    	$product->save();
+        $product->tenkd = str::slug($request->name);
+        $product->save();
 
     	return redirect('admin/product/insert')->with('thongbao', 'Thêm thành công.');
     }

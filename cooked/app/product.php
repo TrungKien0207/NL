@@ -8,10 +8,12 @@ class product extends Model
 {
     protected $table = "product";
     
-    //Product of category
-    public function category() {
-    	return $this->belongsTo('App\category', 'idCategory', 'id');
+    //Product of type
+    public function type() {
+    	return $this->belongsTo('App\type', 'idType', 'id');
     }
 
-    
+    public function category() {
+    	return $this->hasMany('App\category','idCategory','id');
+    }
 }

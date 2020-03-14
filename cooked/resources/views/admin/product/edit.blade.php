@@ -43,6 +43,18 @@
 	                    </div>
 
 	                    <div class="form-group">
+	                        <label><h4>Loại món ăn tiêu biểu</h4></label>
+	                        <select class="form-control" name="idType" placeholder="Nhập tên món ăn" value="{{old('idType',isset($product->idType) ? $product->idType : '')}}">
+	                        	<option value="">Loại món ăn tiêu biểu</option>
+				                @if(isset($type))
+				                    @foreach($type as $ty)
+				   						<option value="{{$ty->id}}" {{old('idType',isset($product->idType) ? $product->idType : '') == ($ty->id) ? 'selected' : ''}}>{{$ty->ten_ty}}</option>
+				                    @endforeach
+				                @endif
+	                        </select>
+	                    </div>
+
+	                    <div class="form-group">
 	                        <label>Tên món ăn</label>
 	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('ten_sp',isset($product->ten_sp) ? $product->ten_sp : '')}}" />
 	                    </div>

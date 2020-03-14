@@ -21,7 +21,8 @@
                 <thead>
                     <tr align="center">
                         <th class="text-center">ID</th>
-                        <th class="text-center">ID Loại Món</th>
+                        <th class="text-center">ID Loại Món ăn</th>
+                        <th class="text-center">ID Loại Món ăn tiêu biểu</th>
                         <th class="text-center">Tên món ăn</th>
                         <th class="text-center">Tên không dấu</th>
                         <th class="text-center">Hình ảnh</th>
@@ -35,6 +36,7 @@
                         <tr class="odd gradeX" align="center">
                             <td class="bg-info">{{$pro->id}}</td>
                             <td>{{$pro->idCategory}}</td>
+                            <td>{{$pro->idType}}</td>
                             <td class="bg-info">{{$pro->ten_sp}}</td>
                             <td>{{$pro->tenkd}}</td>
                             <td class="bg-info">{{$pro->anh_sp}}</td>

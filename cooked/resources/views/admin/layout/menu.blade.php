@@ -38,6 +38,18 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Loại món ăn tiêu biểu<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="admin/type/list">Danh sách loại món ăn tiêu biểu</a>
+                    </li>
+                    <li>
+                        <a href="admin/type/insert">Thêm loại món ăn tiêu biểu</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
                 <a href="#"><i class="fa fa-cube fa-fw"></i>Món ăn<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>

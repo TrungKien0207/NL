@@ -29,6 +29,7 @@
 	                <form action="admin/product/insert" method="POST">
 	                	<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
 	                	{{csrf_field()}} <!-- có dòng này mới được submit -->
+
 	                	<div class="form-group">
 	                        <label><h4>Loại món ăn</h4></label>
 	                        <select class="form-control" name="idCategory" placeholder="Nhập tên món ăn">
@@ -40,6 +41,19 @@
 				                @endif
 	                        </select>
 	                    </div>
+						
+						<div class="form-group">
+	                        <label><h4>Loại món ăn tiểu biểu</h4></label>
+	                        <select class="form-control" name="idType" placeholder="Nhập tên món ăn">
+	                        	<option value="">Loại món ăn tiêu biểu</option>
+				                @if(isset($type))
+				                    @foreach($type as $ty)
+				   						<option value="{{$ty->id}}">{{$ty->ten_ty}}</option>
+				                    @endforeach
+				                @endif
+	                        </select>
+	                    </div>
+
  	                    <div class="form-group">
 	                        <label><h4>Tên món ăn</h4></label>
 	                        <input class="form-control" name="name" placeholder="Nhập tên món ăn" />

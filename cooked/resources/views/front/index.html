@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Conduct Cooked</title>
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+   <script src="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body >
+   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-alt-circle-up fa-2x"></i></button>
+   <!-- navbar -->
+   <header >
+      <nav class="b-header navbar navbar-expand-lg navbar-light bg-light">
+         <ul class="navbar-nav mr-auto my-2 my-lg-0">
+            <li class="nav-item mr-3"><a href="#" class="nav-link">Trang chủ</a></li>
+            <li class="nav-item dropdown mr-3">
+               <a href="#" class="nav-link dropdown-toggle">Món Ăn
+                  <ul class="navbar-nav dropdown-content mt-3">
+                     <li class="dropdown-item">Món Chay</li>
+                     <li class="dropdown-item">Món Xào</li>
+                     <li class="dropdown-item">Món Nướng</li>
+                     <li class="dropdown-item">Món Lẩu</li>
+                     <li class="dropdown-item">Món Chiên</li>
+                  </ul>
+               </a>
+            </li>
+            <li class="nav-item dropdown mr-3">
+               <a href="#" class="nav-link dropdown-toggle"> Nguyên liệu
+                  <ul class="navbar-nav dropdown-content mt-3">
+                     <li class="dropdown-item">Rau củ</li>
+                     <li class="dropdown-item">Thịt</li>
+                     <li class="dropdown-item">Cá</li>
+                     <li class="dropdown-item">Chất phụ gia</li>
+                     <li class="dropdown-item">Nguyên liệu chay</li>
+                  </ul>
+               </a>
+            </li>
+            <li><a href="#" class="nav-link">Liên hệ</a></li>
+         </ul>
+         <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+         </form>
+      </nav>
+   </header >
+   <main class="pt-5" data-aos="fade-up" data-aos-duration="3000">
+      <nav class="container ">
+         <h4 class="d-flex justify-content-center h-100 pt-4">Hôm nay ăn gì? Tìm hiểu nào!</h4>
+         <div class="search h-100" >
+            <div class="d-flex justify-content-center h-100 pt-2">
+               <div class="searchbar">
+                  <input class="search_input " type="text" name="" placeholder="Gà nướng, canh cải, cá kho tiêu,...">
+                  <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="choice-box pt-5">
+            <div class="cuisine-box " data-micron="bounce">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+            <div class="cuisine-box">
+               <div class="choice_item">
+                  <a href="#" target="_blank">
+                     <img src="./image/nuong.png" alt="nướng">
+                     <span>Món nướng</span>
+                  </a> 
+               </div>
+            </div>
+         </div>
+      </nav>
+      <nav><div class="clearfix h-100 p-5"></div></nav>
+      <nav data-aos="fade-up" data-aos-duration="3000"> 
+         <div class="col-sm d-block cod bd1-right bia pb-5">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active ">
+                     <img class="d-block " src="./image/bia1.jpg" alt="First slide" style="width: 1200px; height: 500px; margin: 0 auto">
+                  </div>
+                  <div class="carousel-item " >
+                     <img class="d-block" src="./image/20171229-094344-3.jpg" alt="Second slide" style="width: 1200px; height: 500px; margin: 0 auto">
+                  </div>
+                  <div class="carousel-item " >
+                     <img class="d-block" src="./image/20171229-094443-5.jpg" alt="Three slide" style="width: 1200px; height: 500px; margin: 0 auto">
+                  </div>
+               </div>
+               <a class="carousel-control-prev bot-left" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon icon" aria-hidden="true"></span>
+                  <span class="sr-only text-primary">Previous</span>
+               </a>
+               <a class="carousel-control-next bot-right" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </nav>
+      <nav class="day_box p-5 " data-aos="fade-up" data-aos-duration="3000">
+         <h3>Món ăn nổi bật</h3>
+         <div class="box_empty mb-4"></div>
+         <div class="carousel owl-carousel owl-theme">
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+            <div class="carousel_container touchDrag">
+               <div class="carousel_item ">
+                  <a href="#">
+                     <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                     <div class="carousel_content p-2"><h5>Tôm kho</h5></div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="box_end p-4"></div>
+      </nav>
+      <nav class="form" data-aos="fade-up" data-aos-duration="3000">
+         <div class="box">
+            <div class="title pl-5 pr-4"><h3>Món ăn truyền thống</h3></div>
+            <div class="box_empty mb-4"></div>
+            <div class="box_box d-flex">
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="box_box d-flex">
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="box_end p-4"></div>
+         </div>
+      </nav>
+      <nav class="form pt-4 mb-5" data-aos="fade-up" data-aos-duration="3000">
+         <div class="box">
+            <div class="title pl-5 pr-4 mt-5"><h3>Món ăn thường ngày</h3></div>
+            <div class="box_empty mb-4"></div>
+            <div class="box_box d-flex">
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="box_box d-flex">
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+               <div class="box_container">
+                  <div class="box_item ">
+                     <a href="#">
+                        <img src="./image/cooky-recipe-637028846248659693.jpg" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+                        <div class="box_content p-2"><h5>Tôm kho</h5></div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <nav>
+         <div class="footer">
+            <div class="container">
+                  <div class="row cc ">
+                     <div class="col-sm-7 col-md-7">
+                        <div class="row ">
+                              <div class="col-6 ">
+                                 <h5 class="ct-name">Công thức</h5>
+                                 <div class="ct-name-text">
+                                    <p><a href="#">Món nướng</a></p>
+                                    <p><a href="#">Món chiên</a></p>
+                                    <p><a href="#">Món xào</a></p>
+                                    <p><a href="#">Món hấp</a></p>
+                                    <p><a href="#">Món luộc</a></p>
+                                    <p><a href="#">Món chay</a></p>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <h5 class="ct-name ">Món ăn ngày lễ</h5>
+                                 <div class="ct-name-text">
+                                    <p><a href="#">Dịp Tết</a></p>
+                                    <p><a href="#">Ngày Dỗ</a></p>
+                                    <p><a href="#">Tất niên</a></p>
+                                    <p><a href="#">Sinh nhật</a></p>
+                                 </div>
+                              </div>
+                        </div>
+                     </div>
+                     <!-- <div class="col-sm-4 col-md-4 pl-2 pr-3">
+                        <div class="articles ">
+                              <h5>Articles</h5>
+                              <div class="articles-list d-flex ">
+                                 <img src="./thumb-2.jpg" alt="..." >
+                                 <div class="articles-text pl-4 pt-1 ">
+                                    <h3><a href="#">Introducing the new Jumpstart brand</a></h3>
+                                    <p>October 21th</p>
+                                 </div>
+                              </div><div class="clearfix"></div>
+                              <div class="articles-list d-flex">
+                                 <img src="./thumb-1.jpg" alt="..." >
+                                 <div class="articles-text pl-4 pt-1">
+                                    <h3><a href="#">Making the most of team-building sessions</a></h3>
+                                    <p>October 2nd</p>
+                                 </div>
+                              </div>
+                        </div>
+                     </div> -->
+                     <div class="col-sm-5 col-md-5 pb-5">
+                        <div class="newsletter">
+                              <div class="container-newsletter">
+                                 <h5 class="ct-name ">Đóng góp</h5>
+                                 <div class="email">
+                                    <h6 class="pb-3 pl-3 ">Mọi đóng góp xin nhập ở đây! Chúng tôi rất vui khi nhận được ý kiến của bạn!</h6>
+                                    <div class="container-email d-flex">
+                                          <div class="form-group mx-sm-3 mb-2 ">
+                                             <label for="inputPassword2" class="sr-only ">Đóng góp</label>
+                                             <div class="input-group"></div>
+                                             <textarea class="form-control" aria-label="With textarea"></textarea>
+                                          </div>
+                                          <button type="submit" class="btn btn-info mb-2">Gửi</button>
+                                    </div>
+                                 </div>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- <div class="icon ">
+                     <div class="border-break d-flex justify-content-end ">
+                        <img src="./image/facebook.png" alt="logo " class="mr-5">
+                        <img src="./image/instagram.png" alt="logo" class="mr-5">
+                        <img src="./image/twitter.png" alt="logo" class="mr-5">
+                        <img src="./image/worldwide.png" alt="logo" class="mr-5">
+                     </div>
+                  </div> -->
+            </div>
+         </div>
+      </nav>
+   </main>
+   <script src="./script.js"></script>
+</body>
+</html>
