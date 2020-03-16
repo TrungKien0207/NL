@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Gia vị
+                <h1 class="page-header">Mức độ
                     <small>Danh sách</small>
                 </h1>
             </div>
@@ -22,24 +22,21 @@
                     <tr align="center">
                         <th class="text-center">ID</th>
                         <th class="text-center">ID Món ăn</th>
-                        <th class="text-center">Tên Gia vị</th>
-                        <th class="text-center">Tên không dấu</th>
-                        <th class="text-center">Số lượng</th>
+                        <th class="text-center">Mức độ</th>
+                        <th class="text-center">Mức độ không dấu</th>
                         <th class="text-center">Xóa</th>
                         <th class="text-center">Sửa</th>
                     </tr>
                 </thead>
                 <tbody>
-                   @foreach($spice as $spi)
+                   @foreach($level as $lv)
                         <tr class="odd gradeX" align="center">
-                            <td>{{ $spi->id }}</td>
-                            <td>{{ $spi->idPD }}</td>
-                            <td>{{ $spi->s_ten }}</td>
-                            <td>{{ $spi->s_tenkd }}</td>
-                            <td>{{ $spi->s_soluong }}</td>
-
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/spice/delete/{{ $spi->id }}"> Xóa</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/spice/edit/{{ $spi->id }}">Sửa</a></td>
+                            <td>{{ $lv->id }}</td>
+                            <td>{{ $lv->idPDuct }}</td>
+                            <td>{{ $lv->l_ten }}</td>
+                            <td>{{ $lv->l_tenkd }}</td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/level/delete/{{ $lv->id }}"> Xóa</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/level/edit/{{ $lv->id }}">Sửa</a></td>
                         </tr>
                     @endforeach
                 </tbody>

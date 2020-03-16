@@ -12,4 +12,5 @@ class product extends Model
     public function category() {
     	return $this->hasMany('App\category','idCategory','id');
     }
+    
 }

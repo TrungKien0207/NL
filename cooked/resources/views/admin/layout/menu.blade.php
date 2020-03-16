@@ -110,13 +110,13 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-users fa-fw"></i> Thời gian nấu<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-users fa-fw"></i> Mức độ<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="admin/timeCook/list">Danh sách thời gian</a>
+                        <a href="admin/level/list">Danh sách mức độ</a>
                     </li>
                     <li>
-                        <a href="admin/timeCook/insert">Thêm thời gian nấu</a>
+                        <a href="admin/level/insert">Thêm mức độ</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

@@ -48,6 +48,11 @@
 	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('r_ten',isset($material->r_ten) ? $material->r_ten : '')}}" />
 	                    </div>
 
+	                     <div class="form-group">
+	                        <label>Số lượng</label>
+	                        <input class="form-control" name="r_soluong" placeholder="Nhập tên loại món ăn" value="{{old('r_soluong',isset($material->r_soluong) ? $material->r_soluong : '')}}" />
+	                    </div>
+
 	                    <button type="submit" class="btn btn-info">Sửa</button>
 	                    <button type="reset" class="btn btn-info">Đặt lại</button>
 	                </form>

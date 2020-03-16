@@ -5,7 +5,7 @@
 	@foreach($category as $cat)
 	    <div class="cuisine-box " data-micron="bounce">
 	       <div class="choice_item">
-	          <a href="#" target="_blank">
+	          <a href="{{route('get.category.product',[$cat->c_tenkd,$cat->id])}}" target="_blank">
 	             <img src="./image/nuong.png" alt="nướng">
 	             <span> {{$cat->c_ten}} </span>
 	          </a> 

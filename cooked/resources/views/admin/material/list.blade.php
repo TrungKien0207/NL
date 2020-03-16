@@ -24,6 +24,7 @@
                         <th class="text-center">ID Món ăn</th>
                         <th class="text-center">Tên Nguyên liệu</th>
                         <th class="text-center">Tên không dấu</th>
+                        <th class="text-center">Số lượng</th>
                         <th class="text-center">Xóa</th>
                         <th class="text-center">Sửa</th>
                     </tr>
@@ -35,6 +36,8 @@
                             <td>{{ $mat->idProduct }}</td>
                             <td>{{ $mat->r_ten }}</td>
                             <td>{{ $mat->r_tenkd }}</td>
+                            <td>{{ $mat->r_soluong }}</td>
+
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/material/delete/{{ $mat->id }}"> Xóa</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/material/edit/{{ $mat->id }}">Sửa</a></td>
                         </tr>

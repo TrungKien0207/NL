@@ -115,8 +115,27 @@ Route::group(['prefix'=>'admin'], function() {
 
 		Route::get('delete/{id}', 'UserController@getDelete');
 	});
+
+	Route::group(['prefix'=>'level'], function() {
+		Route::get('list', 'levelController@getList');
+		
+		Route::get('edit/{id}', 'levelController@getEdit');
+		Route::post('edit/{id}', 'levelController@postEdit');
+
+		Route::get('insert', 'levelController@getInsert');
+		Route::post('insert', 'levelController@postInsert');
+
+		Route::get('delete/{id}', 'levelController@getDelete');
+	});
 });
 
 
+
 Route::get('homepage', 'PageController@homePage');
+
 Route::get('product/{slug}-{id}', 'PageController@getListProduct')->name('get.detail.product');
+
+Route::get('danh-muc/{slug}-{id}', 'PageController@getListCategory')->name('get.category.product');
+
+// Route::get('product/{slug}-{id}', 'PageController@getDetail')->name('get.detail.product');
+

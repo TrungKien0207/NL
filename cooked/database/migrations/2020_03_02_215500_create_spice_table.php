@@ -18,6 +18,7 @@ class CreateSpiceTable extends Migration
             $table->tinyInteger('idPD');
             $table->string('s_ten');
             $table->string('s_tenkd');
+            $table->string('s_soluong');
             $table->timestamps();
         });
     }

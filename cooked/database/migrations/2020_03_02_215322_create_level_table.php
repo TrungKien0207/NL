@@ -15,6 +15,7 @@ class CreateLevelTable extends Migration
     {
         Schema::create('level', function ($table) {
             $table->increments('id');
+             $table->tinyInteger('idPDuct');
             $table->string('l_ten');
             $table->string('l_tenkd');
             $table->timestamps();

@@ -40,10 +40,17 @@
 				                @endif
 	                        </select>
 	                    </div>
+
  	                    <div class="form-group">
 	                        <label><h4>Tên gia vị</h4></label>
 	                        <input class="form-control" name="name" placeholder="Nhập tên gia vị" />
 	                    </div>
+
+	                    <div class="form-group">
+	                        <label><h4>Số lượng</h4></label>
+	                        <input class="form-control" name="s_soluong" placeholder="Nhập tên gia vị" />
+	                    </div>
+
 
 	                    <button type="submit" class="btn btn-info">Thêm</button>
 	                    <button type="reset" class="btn btn-info">Đặt lại</button>

@@ -18,6 +18,7 @@ class CreateRawMaterialTable extends Migration
             $table->tinyInteger('idProduct');
             $table->string('r_ten');
             $table->string('r_tenkd');
+            $table->string('r_soluong');
             $table->timestamps();
         });
     }

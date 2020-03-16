@@ -6,7 +6,7 @@
 	    <div class="container-fluid ">
 	        <div class="row ">
 	            <div class="col-lg-12 ">
-	                <h1 class="page-header">Nguyên liệu
+	                <h1 class="page-header">Mức độ
 	                    <small>Thêm</small>
 	                </h1>
 	            </div>
@@ -26,12 +26,13 @@
 						</div>
 					@endif
 					
-	                <form action="admin/material/insert" method="post">
-	                	@csrf
+	                <form action="admin/level/insert" method="POST">
+	                	<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
+	                	{{csrf_field()}} <!-- có dòng này mới được submit -->
 	                	<div class="form-group">
 	                        <label><h4>Món ăn</h4></label>
-	                        <select class="form-control" name="idProduct" placeholder="Nhập tên món ăn">
-	                        	<option value="">Loại món ăn</option>
+	                        <select class="form-control" name="idPDuct" placeholder="Nhập tên món ăn">
+	                        	<option value="">Món ăn</option>
 				                @if(isset($product))
 				                    @foreach($product as $pro)
 				   						<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
@@ -40,15 +41,14 @@
 	                        </select>
 	                    </div>
  	                    <div class="form-group">
-	                        <label><h4>Tên nguyên liệu</h4></label>
-	                        <input class="form-control" name="name" placeholder="Nhập tên nguyên liệu" />
-	                    </div>
-
-	                    <div class="form-group">
-	                        <label><h4>Số lượng</h4></label>
-	                        <input class="form-control" name="r_soluong" placeholder="số lượng" />
-	                    </div>
-
+	                        <label><h4>Mức độ</h4></label>
+	                        <!-- <input type="text" name="name" class="form-control">  -->
+	                        <select name="name" class="form-control">
+                        		<option value="Khó">Khó</option>
+                        		<option value="Trung bình">Trung bình</option>
+                        		<option value="Dễ">Dễ</option>	
+	                        </select>
+						</div>
 	                    <button type="submit" class="btn btn-info">Thêm</button>
 	                    <button type="reset" class="btn btn-info">Đặt lại</button>
 	                </form>

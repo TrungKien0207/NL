@@ -27,6 +27,7 @@ class spiceController extends Controller
             [
                 'name' => 'required|unique:spice,s_ten|min:2|max:50',
                 'idPD' => 'required',
+                's_soluong' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
@@ -36,11 +37,14 @@ class spiceController extends Controller
 
                 'idPD.required' => 'Bạn chưa chọn món ăn',
 
+                's_soluong.required' => 'Bạn chưa nhập số lượng',
+
             ]);
 
         $spice->idPD = $request->idPD;
         $spice->s_ten = $request->name;
         $spice->s_tenkd = str::slug($request->name);
+        $spice->s_soluong = $request->s_soluong;
         $spice->save();
 
         return redirect('admin/spice/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
@@ -57,6 +61,7 @@ class spiceController extends Controller
     		[
                 'name' => 'required|unique:spice,s_ten|min:2|max:50',
                 'idPD' => 'required',
+                's_soluong' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
@@ -66,11 +71,16 @@ class spiceController extends Controller
 
                 'idPD.required' => 'Bạn chưa chọn món ăn',
 
+                's_soluong.required' => 'Bạn chưa nhập số lượng',
+
             ]);
+        
     	$spice = new spice();
+        
         $spice->idPD = $request->idPD;
         $spice->s_ten = $request->name;
         $spice->s_tenkd = str::slug($request->name);
+        $spice->s_soluong = $request->s_soluong;
         $spice->save();
         
 
