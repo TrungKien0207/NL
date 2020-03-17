@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
 
+use App\User;
 use App\category;
 use App\type;
 use App\product;
@@ -13,6 +15,8 @@ use App\material;
 use App\spice;
 use App\timeCook;
 use App\level;
+use App\comment;
+
 
 class PageController extends Controller
 {
@@ -24,6 +28,11 @@ class PageController extends Controller
 		view::share('category', $category);
 		view::share('type', $type);
 		// view::share('product', $product);
+    
+    if(Auth::check()) {
+      view()->share('user', Auth::user());
+    }
+
 	}
     function homePage() {
     	return view('pages.homepage');
@@ -39,7 +48,7 @@ class PageController extends Controller
             // id ==== id
             // $productDetail =  product::where(['idType'=> $id])->get();
            $productDetails =  product::where('id',$id)->get();
-
+           $postProduct = product::find($id);
            // dd($productDetails);
            $getDetails = detail::where('idproduct',$id)->get();
 
@@ -54,6 +63,8 @@ class PageController extends Controller
 
            $category = category::where('id', $id)->get();
 
+           $commentDetails = comment::where('idPro',$id)->paginate(12);
+
             $viewdata = [
                 'productDetails' => $productDetails,
                 'getDetails' => $getDetails,
@@ -62,6 +73,8 @@ class PageController extends Controller
                 'timecooks' => $timecooks,
                 'levels' => $levels,
                 'category' => $category,
+                'postProduct' => $postProduct,
+                'commentDetails' => $commentDetails
             ];
             return view('pages.detail', $viewdata);
         }
@@ -83,6 +96,36 @@ class PageController extends Controller
             ];
             return view('pages.category', $viewdata);
         }
+    }
+
+    public function getLogin() {
+      return view('pages.login');
+    }
+
+    public function postLogin(Request $request) {
+      $this->validate($request, 
+        [
+            'email' => 'required|email',
+            'password' => 'required'
+        ], 
+        [
+            'email.required' => 'Bạn chưa nhập email',
+            'email.email' => 'Bạn chưa nhập đúng định dạng email',
+
+            'password.required' => 'Bạn chưa nhập password!!',
+        ]);
+      if ( Auth::attempt([ 'email'=>$request->email, 'password'=>$request->password ])) {
+            // dd('hello cac to');
+            return redirect('homepage');
+            }
+      else {
+        return redirect('login')->with('thongbao', 'Email hoặc mật khẩu không đúng!');
+      }
+
+    }
+     public function getLogout(){
+        \Auth::logout();
+        return redirect()->back();
     }
 
 }

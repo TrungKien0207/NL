@@ -127,15 +127,25 @@ Route::group(['prefix'=>'admin'], function() {
 
 		Route::get('delete/{id}', 'levelController@getDelete');
 	});
+
+	Route::group(['prefix'=>'comment'], function() {
+		Route::get('delete/{id}', 'commentController@getDelete');
+	});
 });
 
 
 
-Route::get('homepage', 'PageController@homePage');
+Route::get('homepage', 'PageController@homePage')->name('homepage');
 
 Route::get('product/{slug}-{id}', 'PageController@getListProduct')->name('get.detail.product');
 
 Route::get('danh-muc/{slug}-{id}', 'PageController@getListCategory')->name('get.category.product');
 
-// Route::get('product/{slug}-{id}', 'PageController@getDetail')->name('get.detail.product');
+Route::get('login','PageController@getLogin');
+Route::post('login','PageController@postLogin');
+Route::get('dang-xuat','PageController@getLogout')->name('post.logout.user');
+
+Route::post('danh-gia/{id}', 'commentController@postComment');
+
+
 

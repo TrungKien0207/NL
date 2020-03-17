@@ -12,7 +12,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
         <a class="nav-link" href="#">Trang chủ </a>
       </li>
 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -36,14 +36,27 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
         </div>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0 mr-4">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    
+    <li class="nav-item dropdown " style="list-style-type: none;"> 
+      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sign-in-alt fa-2x"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+         @if(Auth::Check())
+          <a class="dropdown-item" href="#">{{\Auth::user()->name}}</a>
+          <a class="dropdown-item" href="{{route('post.logout.user')}}">Đăng xuất</a>
+        @else
+          <a class="dropdown-item" href="login">Đăng nhập</a>
+          <a class="dropdown-item" href="register">Đăng kí</a>
+        @endif
+      </div>
+    </li>
+    
+
   </div>
 </nav>

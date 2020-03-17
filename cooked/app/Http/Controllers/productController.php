@@ -8,12 +8,18 @@ use Illuminate\Support\Str;
 use App\product;
 use App\category;
 use App\type;
+use App\comment;
 
 class productController extends Controller
 {
     public function getList() {
     	$product = product::all();
-    	return view('admin.product.list', ['product'=>$product]);
+        $comments = comment::with('getComment:id,name')->paginate(12);
+        $viewdata = [
+            'product' => $product,
+            'comments' => $comments
+        ];
+    	return view('admin.product.list', $viewdata);
     }
 
     public function getEdit($id) {

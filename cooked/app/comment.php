@@ -13,6 +13,9 @@ class comment extends Model
     }
 
     public  function user() {
-    	return $this->belongsTo('App\product', 'idUser', 'id');
+    	return $this->belongsTo('App\User', 'idUser', 'id');
+    }
+    public function getComment(){
+    	return $this->belongsTo('App\User','idUser','id');
     }
 }

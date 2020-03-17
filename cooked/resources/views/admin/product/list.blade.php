@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Loại món ăn
+                <h1 class="page-header">Món ăn
                     <small>Danh sách</small>
                 </h1>
             </div>
@@ -45,6 +45,44 @@
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/product/edit/{{$pro->id}}">Sửa</a></td>
                         </tr>
                     @endforeach
+                </tbody>
+            </table>    
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <h1 class="page-header">Bình luận
+                    <small>Danh sách</small>
+                </h1>
+            </div>
+
+            <!-- /.col-lg-12 -->
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                    <tr align="center">
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Tên người dùng</th>
+                        <th class="text-center">Tên sản phẩm</th>
+                        <th class="text-center">Nội dung</th>
+                        <th class="text-center">Ngày đăng</th>
+                        <th class="text-center">Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if($comments)
+                    @foreach($comments as $comment)
+                        <tr class="odd gradeX" align="center">
+                            <td class="bg-info">{{$comment->id}}</td>
+                            <td>{{isset($comment->getComment->name) ? $comment->getComment->name : 'NO'}}</td>
+                            <td>{{isset($comment->product->ten_sp) ? $comment->product->ten_sp : 'NO'}}</td>
+                            <td>{{$comment->contentC}}</td>
+                            <td class="bg-info">{{$comment->created_at}}</td>
+
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/comment/delete/{{$comment->id}}"> Xóa</a></td>
+                        </tr>
+                    @endforeach
+                    @endif
                 </tbody>
             </table>    
         </div>

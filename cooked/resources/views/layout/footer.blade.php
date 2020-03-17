@@ -46,24 +46,6 @@
 	                          </div>
 	                    </div>
 	                 </div> -->
-	                 <div class="col-sm-5 col-md-5 pb-5">
-	                    <div class="newsletter">
-	                          <div class="container-newsletter">
-	                             <h5 class="ct-name ">Đóng góp</h5>
-	                             <div class="email">
-	                                <h6 class="pb-3 pl-3 ">Mọi đóng góp xin nhập ở đây! Chúng tôi rất vui khi nhận được ý kiến của bạn!</h6>
-	                                <div class="container-email d-flex">
-	                                      <div class="form-group mx-sm-3 mb-2 ">
-	                                         <label for="inputPassword2" class="sr-only ">Đóng góp</label>
-	                                         <div class="input-group"></div>
-	                                         <textarea class="form-control" aria-label="With textarea"></textarea>
-	                                      </div>
-	                                      <button type="submit" class="btn btn-info mb-2">Gửi</button>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
 	            </div>
 	        </div>
 	     </div>

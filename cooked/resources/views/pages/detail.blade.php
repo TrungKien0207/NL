@@ -3,7 +3,7 @@
 @section('content')
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-alt-circle-up fa-2x"></i></button>
     <main>
-        <nav class="intro d-flex justify-content-center p-5" data-aos="fade-up" data-aos-duration="3000">
+        <nav class="intro d-flex justify-content-center p-5" data-aos="fade-up" data-aos-duration="2000">
             <div class="intro_container shadow">
                 <div class="intro_box">
                     <div class="intro_image w-100">
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="ingredients d-flex justify-content-center pl-5 pr-5 pb-3" data-aos="fade-up" data-aos-duration="3000" >
+        <nav class="ingredients d-flex justify-content-center pl-5 pr-5 pb-3" data-aos="fade-up" data-aos-duration="2000" >
             <div class="ingredients_container shadow" >
                 <div class="ingredients_box">
                     <div class="ingredients_name border-bottom pb-1">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="cook d-flex justify-content-center pt-4 pb-5 " data-aos="fade-up" data-aos-duration="3000">
+        <nav class="cook d-flex justify-content-center pt-4 pb-5 " data-aos="fade-up" data-aos-duration="2000">
             <div class="cook_container shadow">
                 <div class="cook_box">
                     <div class="cook_first d-flex justify-content-between border-bottom">
@@ -161,6 +161,51 @@
 
                 </div>
             </div>
+
         </nav>
+        @if(Auth::Check())
+            <div class="m-3"  data-aos="fade-up" data-aos-duration="2000">
+                <div class="newsletter">
+                    @if(session('thongbao'))
+                        {{session('thongbao')}}
+                    @endif
+                    <form action="danh-gia/{{$postProduct->id}}" method="post">
+                    @csrf
+                        <div class="container-newsletter">
+                            <h5 class="ct-name ">Đóng góp</h5>
+                            <div class="email">
+                                <h6 class="text-center">Mọi ý kiến xin nhập ở đây! Chúng tôi rất vui khi nhận được sự đóng góp của bạn!</h6>
+                            
+                                <div class="container-email d-flex justify-content-center">
+                                    <div class="form-group mx-sm-3 mb-2 ">
+                                        <label for="inputPassword2" class="sr-only ">Đóng góp</label>
+                                        <div class="input-group"></div>
+                                        <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-info mb-2">Gửi</button>
+                                </div>
+                                @if($commentDetails)
+                                    @foreach($commentDetails as $commentDetail)
+                                        <div class="comment pl-5 pr-4">
+                                            <div class="cont pt-3 pb-1">
+                                                <div class="comment__txt p-3" style="background-color: #C3BABA; border-radius: 10px;">
+                                                    <div class="d-flex pb-2">
+                                                        <h6 class="comment__name mb-1" style="color: black; font-family: inherit;">{{$commentDetail->getComment->name}}</h6>
+                                                        <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #fff">{{$commentDetail->created_at}}</div>
+                                                    </div>
+
+                                                    <div class="comment__conent">{{$commentDetail->contentC}}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        @endif
+
     </main>
 @endsection
