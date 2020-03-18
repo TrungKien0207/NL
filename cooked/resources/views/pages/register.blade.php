@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Sign up</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="{{asset('')}}">
@@ -20,10 +20,12 @@
 <body>
 	
 	<div class="limiter">
+
 		<div class="container-login100" style="background-image: url('admin_asset/images/1.jpg');">
+
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
-					Login user 
+					Sign up
 				</span>
 
 				@if(count($errors) > 0)
@@ -35,14 +37,20 @@
 				@endif
 
 				@if(session('thongbao'))
-					<div class="alert alert-danger">
+					<div class="alert alert-success">
 						{{session('thongbao')}}
 					</div>
 				@endif
 
-				<form class="login100-form validate-form p-b-33 p-t-5" action="admin/login" method="POST">
+				<form class="login100-form validate-form p-b-33 p-t-5" action="signup" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
-	                	{{csrf_field()}} <!-- có dòng này mới được submit
+	                	{{csrf_field()}}  <!-- có dòng này mới được submit -->
+
+	                <div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="name" placeholder="Name">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
@@ -53,12 +61,21 @@
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
-					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Login
-						</button>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="repassword" placeholder="Repassword">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
+					<div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn">
+							Sign up
+						</button>
+					</div>
+					<button type="button" class="btn btn-outline-light float-right clearfix">
+						<a class="dropdown-item text-right" style="" href="login"><i class="fas fa-sign-in-alt mr-2"></i><b>Đăng nhập</b></a>
+					</button>
+					<div class="clearfix"></div>
+					
 				</form>
 			</div>
 		</div>

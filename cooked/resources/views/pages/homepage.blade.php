@@ -51,23 +51,28 @@
 	@foreach($type as $ty => $val)
 		<nav class="form pt-5" data-aos="fade-up" data-aos-duration="3000">
 	     	<div class="box">
-		        <div class="title pl-5 pr-4"><h3> {{$val->ten_ty}} </h3></div>
+		        <div class="title pl-5 pr-4"><h3> <b>{{$val->ten_ty}}</b> </h3></div>
 		        <div class="box_empty mb-4"></div>
 		        @if(isset($val->getType) != null)
+ 				        <div class="box_box row row-cols-4">
 			        @foreach($val->getType as $key => $value )
-	 				        <div class="box_box d-flex">
-					           	<div class="box_container">
-					              	<div class="box_item ">
-					                 	<a href="{{route('get.detail.product',[$value->tenkd,$value->id])}}">
-						                    <img src="image/{{$value->anh_sp}}" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
-						                    <div class="box_content p-2"><h5>
-						                    	{{isset($value->ten_sp) ? $value->ten_sp : ''}}
-						                    </h5></div>
-					                 	</a>
-					              	</div>	
-					           	</div>
-					        </div>
+				           	<div class="box_container col-sm-12 col-md-3 ">
+				              	<div class="box_item ">
+				                 	<a href="{{route('get.detail.product',[$value->tenkd,$value->id])}}">
+					                    <img src="image/{{$value->anh_sp}}" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
+					                    <div class="box_content p-2">
+					                    	<h5>
+					                    	<b>{{isset($value->ten_sp) ? $value->ten_sp : ''}}</b>
+					                    	</h5>
+					                		<p style="font-size: 14px;">
+					                    	{{isset($value->content) ? $value->content : ''}}
+					                    	</p>
+					                	</div>   
+				                 	</a>
+				              	</div>	
+				           	</div>
 					@endforeach
+				        </div>
 				@endif
 		        <div class="box_end p-4"></div>
 	     	</div>

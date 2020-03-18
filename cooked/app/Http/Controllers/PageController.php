@@ -123,9 +123,85 @@ class PageController extends Controller
       }
 
     }
-     public function getLogout(){
+
+    public function getLogout(){
         \Auth::logout();
         return redirect()->back();
     }
 
+    public function getUserProfile() {
+      return view('pages.user');
+    }
+
+    public function postUserProfile(Request $request) {
+      $users = Auth::User();
+      // dd($users);
+      
+    
+      if($request->customSwitch1 == "on"){
+
+        $this->validate($request, 
+        [
+                'email' => 'required|email',
+                'pdag' => 'same:pd'
+            ], 
+            [
+
+                'email.required' => 'Bạn chưa nhập email',
+                'email.email' => 'Bạn chưa nhập đúng định dạng email',
+
+                'pdag.same' => 'Mật khẩu không đúng!!',
+            ]);
+
+        $users->name = $request->ten;
+        $users->email = $request->email;
+        $users->password = bcrypt($request->password);
+        $users->level = $request->quyen;
+        $users->save();
+        
+
+      
+    }
+    return redirect('user')->with('thongbao', 'Sửa thành công.');
+  }
+
+  public function getDangki() {
+    return view('pages.register');
+  }
+
+  public function postDangki(Request $request) {
+    $this->validate($request, 
+        [
+                'name' => 'required|unique:users,name|min:4',
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|min:6|max:32',
+                'repassword' => 'required|same:password'
+            ], 
+            [
+                'name.required' => 'Bạn chưa nhập tên người dùng',
+                'name.min' => 'Tên người dùng phải có tối thiểu 4 kí tự!',
+                'name.unique' => 'Tên người dùng đã tồn tại đã tồn tại',
+
+                'email.required' => 'Bạn chưa nhập email',
+                'email.email' => 'Bạn chưa nhập đúng định dạng email',
+                'email.unique' => 'Email đã tồn tại',
+
+                'password.required' => 'Bạn chưa nhập mật khẩu',
+                'password.min' => 'Mật khẩu phải có ít nhất 6 kí tự',
+                'password.max' => 'Mật khẩu phải có tối đa 32 kí tự',
+
+                'repassword.required' => 'Mật khẩu không đúng!',
+                'repassword.same' => 'Mật khẩu không đúng!!',
+
+            ]);
+        $users = new User();
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->password = bcrypt($request->password);
+        $users->level = 0;
+        $users->save();
+        
+
+      return redirect('signup')->with('thongbao', 'Đăng kí thành công.');
+  }
 }

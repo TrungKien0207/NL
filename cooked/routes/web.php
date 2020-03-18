@@ -147,5 +147,11 @@ Route::get('dang-xuat','PageController@getLogout')->name('post.logout.user');
 
 Route::post('danh-gia/{id}', 'commentController@postComment');
 
+Route::get('user', 'PageController@getUserProfile');
+Route::post('user', 'PageController@postUserProfile');
+
+Route::get('signup', 'PageController@getDangki');
+Route::post('signup', 'PageController@postDangki');
+
 
 

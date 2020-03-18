@@ -66,13 +66,13 @@ class UserController extends Controller
         $users = User::find($id);
         $this->validate($request, 
     		[
-                'name' => 'required|unique:users,name|min:4',
+                'name' => 'required|unique:users,name|min:1',
                 'email' => 'required|email',
                 'pdag' => 'same:pd'
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên người dùng',
-                'name.min' => 'Tên người dùng phải có tối thiểu 4 kí tự!',
+                'name.min' => 'Tên người dùng phải có tối thiểu 1 kí tự!',
                 'name.unique' => 'Tên người dùng đã tồn tại đã tồn tại',
 
                 'email.required' => 'Bạn chưa nhập email',
@@ -88,7 +88,7 @@ class UserController extends Controller
         $users->save();
         
 
-    	return redirect('admin/User/list')->with('thongbao', 'Thêm thành công.');
+    	return redirect('admin/User/list')->with('thongbao', 'Sửa thành công.');
     }
 
     public function getDelete($id) {
