@@ -33,6 +33,11 @@
 	                        <label>Tên loại món ăn</label>
 	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('c_ten',isset($category->c_ten) ? $category->c_ten : '')}}" />
 	                    </div>
+
+	                    <div class="form-group">
+	                        <label><h4>Hình ảnh</h4></label>
+	                        <input type="file" class="form-control-file" name="c_img"/>
+	                    </div>
 	                    
 	                    <button type="submit" class="btn btn-info">Sửa</button>
 	                    <button type="reset" class="btn btn-info">Đặt lại</button>

@@ -19,6 +19,7 @@ class CreateDetailTable extends Migration
             $table->string('step');
             $table->string('content');
             $table->string('contentkd');
+            $table->string('note')->nullable();
             $table->string('img1')->nullable();
             $table->string('img2')->nullable();
             $table->string('img3')->nullable();

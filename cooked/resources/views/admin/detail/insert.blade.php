@@ -50,6 +50,12 @@
 	                        <input class="form-control" name="content" placeholder="Nhập tên gia vị" />
 	                    </div>
 
+	                    <div class="form-group col">
+	                        <label><h4>Chú ý</h4></label>
+	                        <input class="form-control" name="note" placeholder="Nhập tên gia vị" />
+	                    </div>
+
+
 	                    <div class="row">
 	                    	<div class="form-group col-sm-4">
 	                        <label><h4>Ảnh 1</h4></label>

@@ -34,6 +34,7 @@ class categoryController extends Controller
 
         $category->c_ten = $request->name;
         $category->c_tenkd = str::slug($request->name);
+        $category->c_img = $request->c_img;
         $category->save();
 
         return redirect('admin/category/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
@@ -55,10 +56,11 @@ class categoryController extends Controller
     			'name.max' => 'Tên loại món ăn phải có tối đa 50 kí tự!',
     		]);
 
-    	$Category = new category;
-    	$Category->c_ten = $request->name;
-    	$Category->c_tenkd = str::slug($request->name);
-    	$Category->save();
+    	$category = new category;
+    	$category->c_ten = $request->name;
+    	$category->c_tenkd = str::slug($request->name);
+        $category->c_img = $request->c_img;
+    	$category->save();
 
     	return redirect('admin/category/insert')->with('thongbao', 'Thêm thành công.');
     }

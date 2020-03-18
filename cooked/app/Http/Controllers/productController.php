@@ -36,7 +36,7 @@ class productController extends Controller
                 'name' => 'required|unique:product,ten_sp|min:2|max:50',
                 'idCategory' => 'required',
                 'idCategory' => 'required',
-                'idType' => 'required',
+                
                 'content' => 'required|unique:product,content',
                 'img' => 'required|unique:product,anh_sp',
             ], 
@@ -48,7 +48,7 @@ class productController extends Controller
 
                 'idCategory.required' => 'Bạn chưa chọn loại món ăn',
 
-                'idType.required' => 'Bạn chưa chọn loại món ăn tiêu biểu',
+               
 
                 'content.required' => 'Bạn chưa nhập nội dung.',
                 'content.unique' => 'Nội dung món ăn đã tồn tại',
@@ -81,7 +81,7 @@ class productController extends Controller
                 'name' => 'required|unique:product,ten_sp|min:2|max:50',
                 'idCategory' => 'required',
                 'idCategory' => 'required',
-                'idType' => 'required',
+                
                 'content' => 'required|unique:product,content',
                 'img' => 'required|unique:product,anh_sp',
             ], 
@@ -93,7 +93,7 @@ class productController extends Controller
 
                 'idCategory.required' => 'Bạn chưa chọn loại món ăn',
 
-                'idType.required' => 'Bạn chưa chọn loại món ăn tiêu biểu',
+                
 
                 'content.required' => 'Bạn chưa nhập nội dung.',
                 'content.unique' => 'Nội dung món ăn đã tồn tại',

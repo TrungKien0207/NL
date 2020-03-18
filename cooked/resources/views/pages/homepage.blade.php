@@ -64,7 +64,7 @@
 					                    	<h5>
 					                    	<b>{{isset($value->ten_sp) ? $value->ten_sp : ''}}</b>
 					                    	</h5>
-					                		<p style="font-size: 14px;">
+					                		<p style="font-size: 12px;">
 					                    	{{isset($value->content) ? $value->content : ''}}
 					                    	</p>
 					                	</div>   

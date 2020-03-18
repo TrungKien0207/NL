@@ -31,7 +31,7 @@
 	                	<div class="form-group">
 	                        <label><h4>Món ăn</h4></label>
 	                        <select class="form-control" name="idProduct" placeholder="Nhập tên món ăn">
-	                        	<option value="">Loại món ăn</option>
+	                        	<option value="">Món ăn</option>
 				                @if(isset($product))
 				                    @foreach($product as $pro)
 				   						<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>

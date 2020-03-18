@@ -33,6 +33,11 @@
 	                        <label><h4>Tên loại món ăn</h4></label>
 	                        <input class="form-control" name="name" placeholder="Nhập tên loại món ăn" />
 	                    </div>
+						<div class="form-group">
+	                        <label><h4>Hình ảnh</h4></label>
+	                        <input type="file" class="form-control-file" name="c_img"/>
+	                    </div>
+
 	                    <button type="submit" class="btn btn-info">Thêm</button>
 	                    <button type="reset" class="btn btn-info">Đặt lại</button>
 	                </form>

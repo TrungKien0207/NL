@@ -52,6 +52,11 @@
 	                        <input class="form-control" name="step" placeholder="Nhập tên gia vị" value="{{old('step',isset($detail->step) ? $detail->step : '')}}" />
 	                    </div>
 
+	                    <div class="form-group col-sm">
+	                        <label><h4>Chú ý</h4></label>
+	                        <input class="form-control" name="note" placeholder="Nhập tên gia vị" value="{{old('note',isset($detail->note) ? $detail->note : '')}}" />
+	                    </div>
+
 	                    <div class="row border">
 	                    	<div class="form-group col-sm-4 ">
 		                        <label><h4>Ảnh 1</h4></label>

@@ -11,10 +11,10 @@
                     </div>
                     <div class="intro_content">
                         <div class="first_content d-flex justify-content-center pt-4">
-                            <div class="d-flex">
+                            <!-- <div class="d-flex">
                                 <div class="p-1 text-muted"><p>Mục đích:</p></div>
                                 <div class="p-1"><p><i><b>Tiệc</b></i></p></div>
-                            </div>
+                            </div> -->
 
                             @if($category)
                                 @foreach($category as $categorys)
@@ -46,21 +46,21 @@
                             @if( $timecooks )
                                 @foreach( $timecooks as $timecook )
                             <div>
-                                <h5 class="text-center" >Thời gian nấu</h5>
-                                <h4 class="text-center d-flex justify-content-center" style="color: #ffa500;">{{ $timecook->t_ten }} <p style="font-size: 14px;">phút</p> </h4>
+                                <h5 class="text-center" style="color: #fff;" >Thời gian nấu</h5>
+                                <h4 class="text-center d-flex justify-content-center" style="color: #ffa500;"><b>{{ $timecook->t_ten }}</b> <p style="font-size: 14px;">phút</p> </h4>
                             </div>
                                 @endforeach
                             @endif
                             <div>
-                                <h5 class="text-center">Phần</h5>
-                                <h4 class="text-center d-flex justify-content-center" style="color: #ffa500;"> 2  <p style="font-size: 14px;">người</p></h4>
+                                <h5 class="text-center" style="color: #fff;">Phần</h5>
+                                <h4 class="text-center d-flex justify-content-center" style="color: #ffa500;"><b>2</b><p style="font-size: 14px;">người</p></h4>
                             </div>
 
                             @if($levels)
                                 @foreach($levels as $level)
                             <div>
-                                <h5 class="text-center">Độ khó</h5>
-                                <h4 class="text-center" style="color: #ffa500;">{{ $level->l_ten }}</h4>
+                                <h5 class="text-center" style="color: #fff;">Độ khó</h5>
+                                <h4 class="text-center" style="color: #ffa500;"><b>{{ $level->l_ten }}</b></h4>
                             </div>
                                 @endforeach
                             @endif
@@ -73,7 +73,7 @@
             <div class="ingredients_container shadow" >
                 <div class="ingredients_box">
                     <div class="ingredients_name border-bottom pb-1">
-                        <h4>Nguyên liệu làm tôm xóc tỏi ớt</h4>
+                        <h4><b>{{$productDetail->ten_sp}}</b></h4>
                         <p class="text-muted ">cho 2 Phần ăn</p>
                     </div>
 
@@ -91,16 +91,19 @@
                     @endif
                     
                     @if( $getSpices )
-                        @foreach( $getSpices as $getSpice )
-                    <div class="ingredients_content pt-3">
+                    <div class="con ">
+                        <div class="ingredients_content pt-2">
                         <ul class="row ">
-                            <li class="d-flex  col-6">
+                        @foreach( $getSpices as $getSpice )
+                            <li class="d-flex  col-6 ">
                                 <p class="pl-5 sticker"><i class="far fa-paper-plane pr-3" style="color: #ff0000;"></i>{{$getSpice->s_ten}}</p>
                                 <p class="pl-3" style="color: #ffa500;"><b>{{$getSpice->s_soluong}}</b></p>
                             </li>
+                             @endforeach
                         </ul>
                     </div>
-                        @endforeach
+                    </div>
+                       
                     @endif
                 </div>
             </div>
@@ -131,37 +134,42 @@
                                 <div class="bg-light border rounded step_box shadow">
                                     <p style="font-size: 16px;" class="text-muted pt-2">Bước</p>
                                     <h1 class="text-center" style="color: #ff0000;">
-                                    {{$getDetail->step}}	</h1>
+                                    <b>{{$getDetail->step}}</b></h1>
                                 </div>
                             </div>
                             <div class="step_content">
                                 <p>{{$getDetail->content}}</p>
-                                <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>Rạch càng sâu thì tôm xòe ra càng đẹp và thấm gia vị hơn, tuy nhiên, tránh làm đứt phần thân, đầu và đuôi.</p>
+                                <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>{{$getDetail->note}}</p>
                                 
                             </div>
                         </div>
-                        <div class="step_box_img row row-cols-2">
-                            <div class="step_img col p-3">
-                                <img src="./image/buoc1-1.jpg" width="286px" height="286px" alt="1">
-                            </div>
-                            <div class="step_img col p-3">
-                                <img src="./image/buoc1-2.jpg" width="286px" height="286px" alt="1">
-                            </div>
-                            <div class="step_img col p-3">
-                                <img src="./image/buoc1-3.jpg" width="286px" height="286px" alt="1">
-                            </div>
-                            <div class="step_img col p-3">
-                                <img src="./image/buoc1-4.jpg" width="286px" height="286px" alt="1">
-                            </div>
-                        </div>
+                        
+                                <div class="step_box_img row row-cols-2">
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img1}}" width="286px" height="286px" alt="1">
+                                    </div>
+
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img2}}" width="286px" height="286px" alt="2">
+                                    </div>
+                                    
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img3}}" width="286px" height="286px" alt="3">
+                                    </div>
+                                
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img4}}" width="286px" height="286px" alt="4">
+                                    </div>
+                                </div>
+   
                     </div>
                    
 					@endforeach
 						@endif
 
                 </div>
+                <h3 class="text-center m-5"><b>Chúc bạn thành công.</b></h3>
             </div>
-
         </nav>
         @if(Auth::Check())
             <div class="m-3"  data-aos="fade-up" data-aos-duration="2000">
@@ -172,9 +180,9 @@
                     <form action="danh-gia/{{$postProduct->id}}" method="post">
                     @csrf
                         <div class="container-newsletter">
-                            <h5 class="ct-name ">Đóng góp</h5>
+                            
                             <div class="email">
-                                <h6 class="text-center">Mọi ý kiến xin nhập ở đây! Chúng tôi rất vui khi nhận được sự đóng góp của bạn!</h6>
+                                <h4 class="text-left mb-3"><b>Bình luận</b></h4>
                             
                                 <div class="container-email d-flex justify-content-center">
                                     <div class="form-group mx-sm-3 mb-2 ">
@@ -182,19 +190,19 @@
                                         <div class="input-group"></div>
                                         <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-info mb-2">Gửi</button>
+                                    <button type="submit" class="btn btn-success mb-2">Gửi</button>
                                 </div>
                                 @if($commentDetails)
                                     @foreach($commentDetails as $commentDetail)
                                         <div class="comment pl-5 pr-4">
                                             <div class="cont pt-3 pb-1">
-                                                <div class="comment__txt p-3" style="background-color: #C3BABA; border-radius: 10px;">
+                                                <div class="comment__txt p-3" style="background-color:#32936F; border-radius: 10px;">
                                                     <div class="d-flex pb-2">
-                                                        <h6 class="comment__name mb-1" style="color: black; font-family: inherit;">{{$commentDetail->getComment->name}}</h6>
+                                                        <p class="comment__name mb-1" style="color: #fff; font-size: 20px;font-family: inherit;"><b>{{$commentDetail->getComment->name}}</b></p>
                                                         <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #fff">{{$commentDetail->created_at}}</div>
                                                     </div>
 
-                                                    <div class="comment__conent">{{$commentDetail->contentC}}</div>
+                                                    <div class="comment__conent" style="color: #fff;">{{$commentDetail->contentC}}</div>
                                                 </div>
                                             </div>
                                         </div>

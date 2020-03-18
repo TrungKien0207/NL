@@ -18,11 +18,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
           Loại món ăn
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          @if($category)
-            @foreach($category as $cat)
-              <a class="dropdown-item" href="{{route('get.category.product',[$cat->c_tenkd,$cat->id])}}">{{$cat->c_ten}}</a>
-            @endforeach
-          @endif
+          
         </div>
       
       </li>
@@ -31,13 +27,13 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Món ăn tiêu biểu
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           @if($type)
             @foreach($type as $ty)
               <a class="dropdown-item" href="{{route('get.detail.product',[$ty->tenkd,$ty->id])}}">{{$ty->ten_ty}}</a>
             @endforeach
           @endif
-        </div>
+        </div> -->
       </li>
 
     </ul>
