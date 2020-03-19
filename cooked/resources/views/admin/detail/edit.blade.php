@@ -57,7 +57,13 @@
 	                        <input class="form-control" name="note" placeholder="Nhập tên gia vị" value="{{old('note',isset($detail->note) ? $detail->note : '')}}" />
 	                    </div>
 
+	                    <div class="form-group col-sm-4 ">
+		                        <label><h4>Ảnh background</h4></label>
+		                        <input type="file" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" value="{{old('bg',isset($detail->bg) ? $detail->bg : '')}}" />
+		                   </div>
+
 	                    <div class="row border">
+
 	                    	<div class="form-group col-sm-4 ">
 		                        <label><h4>Ảnh 1</h4></label>
 		                        <input type="file" class="form-control-file" name="image1" placeholder="Nhập tên gia vị" value="{{old('image1',isset($detail->img1) ? $detail->img1 : '')}}" />

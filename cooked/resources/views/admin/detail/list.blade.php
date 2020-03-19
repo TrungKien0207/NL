@@ -26,6 +26,7 @@
                         <th class="text-center">Nội dung</th>
                         <th class="text-center">Nội dung không dấu</th>
                         <th class="text-center">Chú ý</th>
+                        <th class="text-center">Nền</th>
                         <th class="text-center">Hình ảnh 1</th>
                         <th class="text-center">Hình ảnh 2</th>
                         <th class="text-center">Hình ảnh 3</th>
@@ -45,6 +46,7 @@
                             <td>{{ $de->content }}</td>
                             <td>{{ $de->contentkd }}</td>
                             <td>{{ $de->note }}</td>
+                            <td>{{ $de->bg }}</td>
                             <td>{{ $de->img1 }}</td>
                             <td>{{ $de->img2 }}</td>
                             <td>{{ $de->img3 }}</td>

@@ -1,7 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light " style="background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #051B35; ">
   
-  <a class="navbar-brand text-center" href="homepage"><i class="fas fa-book"></i><h3><b>Cooked</b></h3></a>
+  <a class="navbar-brand text-center" href="homepage"><i class="fas fa-book" style="color: #FFF ;"></i><h3 style="color: #FFF ;"><b>Cooked</b></h3></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,7 +9,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active">
-        <a class="nav-link" href="homepage" style="font-size: 18px">Trang chủ </a>
+        <a class="nav-link" href="homepage" style="font-size: 18px; color: #FFF ;">Trang chủ </a>
       </li>
 
       <li class="nav-item dropdown ">
@@ -39,12 +38,12 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
     </ul>
 
     <form class="form-inline my-2 my-lg-0 mr-4">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+      <button class="btn btn-light my-2 my-sm-0" type="submit">Tìm kiếm</button>
     </form>
     
     <li class="nav-item dropdown " style="list-style-type: none;"> 
-      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sign-in-alt fa-2x"></i>
+      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFF; font-size: 25px;"><i class="fas fa-sign-in-alt "></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
          @if(Auth::Check())

@@ -6,9 +6,17 @@
         <nav class="intro d-flex justify-content-center p-5" data-aos="fade-up" data-aos-duration="2000">
             <div class="intro_container shadow">
                 <div class="intro_box">
+
+                @if($getDetails)
+                    @foreach($getDetails as $getDetail)   
+                    @if($getDetail->bg != null)  
                     <div class="intro_image w-100">
-                        <img src="./image/content1.jpg" alt="1">
+                        <img src="image/img_detail/{{$getDetail->bg}}" alt="background">
                     </div>
+                    @endif
+                    @endforeach
+                @endif
+
                     <div class="intro_content">
                         <div class="first_content d-flex justify-content-center pt-4">
                             <!-- <div class="d-flex">
@@ -16,14 +24,14 @@
                                 <div class="p-1"><p><i><b>Tiệc</b></i></p></div>
                             </div> -->
 
-                            @if($category)
+                            <!-- @if($category)
+                                <div class="d-flex pl-3">
+                                    <div class="p-1 text-muted"><p>Cách thực hiện:</p></div>
                                 @foreach($category as $categorys)
-                            <div class="d-flex pl-3">
-                                <div class="p-1 text-muted"><p>Cách thực hiện:</p></div>
-                                <div class="p-1"><p><i><b>{{$categorys->c_ten}}</b></i></p></div>
-                            </div>
+                                    <div class="p-1"><p><i><b>{{$categorys->c_ten}}</b></i></p></div>
                                 @endforeach
-                            @endif
+                                </div>
+                            @endif -->
 
                         </div>
 
@@ -78,32 +86,31 @@
                     </div>
 
                     @if($getMaterials)
-                        @foreach($getMaterials as $getMaterial)
-                    <div class="ingredients_content pt-3">
-                        <ul class="row ">
-                            <li class="d-flex  col-6">
-                                <p class="pl-5 sticker"><i class="far fa-paper-plane pr-3" style="color: #ff0000;"></i>{{$getMaterial->r_ten}}</p>
-                                <p class="pl-3" style="color: #ffa500;"><b>{{$getMaterial->r_soluong}}</b></p>
-                            </li>
-                        </ul>
-                    </div>
-                        @endforeach
+                            <div class="ingredients_content pt-3">
+                                <ul class="row">
+                                @foreach($getMaterials as $getMaterial)
+                                    <li class="d-flex  col-6">
+                                        <p class="pl-5 sticker"><i class="far fa-paper-plane pr-3" style="color: #ff0000;"></i>{{$getMaterial->r_ten}}</p>
+                                        <p class="pl-3" style="color: #ffa500;"><b>{{$getMaterial->r_soluong}}</b></p>
+                                    </li>
+                                @endforeach
+                                </ul>
+                            </div>
                     @endif
                     
                     @if( $getSpices )
-                    <div class="con ">
-                        <div class="ingredients_content pt-2">
-                        <ul class="row ">
-                        @foreach( $getSpices as $getSpice )
-                            <li class="d-flex  col-6 ">
-                                <p class="pl-5 sticker"><i class="far fa-paper-plane pr-3" style="color: #ff0000;"></i>{{$getSpice->s_ten}}</p>
-                                <p class="pl-3" style="color: #ffa500;"><b>{{$getSpice->s_soluong}}</b></p>
-                            </li>
-                             @endforeach
-                        </ul>
-                    </div>
-                    </div>
-                       
+                        <div class="con ">
+                            <div class="ingredients_content pt-2">
+                            <ul class="row ">
+                            @foreach( $getSpices as $getSpice )
+                                <li class="d-flex  col-6 ">
+                                    <p class="pl-5 sticker"><i class="far fa-paper-plane pr-3" style="color: #ff0000;"></i>{{$getSpice->s_ten}}</p>
+                                    <p class="pl-3" style="color: #ffa500;"><b>{{$getSpice->s_soluong}}</b></p>
+                                </li>
+                            @endforeach
+                            </ul>
+                        </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -137,29 +144,51 @@
                                     <b>{{$getDetail->step}}</b></h1>
                                 </div>
                             </div>
-                            <div class="step_content">
+                            <div class="step_content text-justify">
                                 <p>{{$getDetail->content}}</p>
-                                <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>{{$getDetail->note}}</p>
                                 
+                                @if($getDetail->note != null)
+                                    <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>{{$getDetail->note}}</p>
+                                @endif
                             </div>
                         </div>
-                        
+                            
                                 <div class="step_box_img row row-cols-2">
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img1}}" width="286px" height="286px" alt="1">
                                     </div>
-
+                                    
+                                    @if($getDetail->img2 != null)
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img2}}" width="286px" height="286px" alt="2">
                                     </div>
-                                    
+                                    @endif
+
+                                    @if($getDetail->img3 != null)
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img3}}" width="286px" height="286px" alt="3">
                                     </div>
-                                
+                                    @endif
+                                    
+                                    @if($getDetail->img4 != null)
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img4}}" width="286px" height="286px" alt="4">
                                     </div>
+                                    @endif
+
+                                    @if($getDetail->img5 != null)
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img5}}" width="286px" height="286px" alt="4">
+                                    </div>
+                                    @endif
+
+                                    @if($getDetail->img6 != null)
+                                    <div class="step_img col p-3">
+                                        <img src="image/img_detail/{{$getDetail->img6}}" width="286px" height="286px" alt="4">
+                                    </div>
+                                    @endif
+
+
                                 </div>
    
                     </div>
@@ -172,7 +201,7 @@
             </div>
         </nav>
         @if(Auth::Check())
-            <div class="m-3"  data-aos="fade-up" data-aos-duration="2000">
+            <div class="m-3"  data-aos="fade-up" data-aos-duration="1000">
                 <div class="newsletter">
                     @if(session('thongbao'))
                         {{session('thongbao')}}
@@ -190,7 +219,7 @@
                                         <div class="input-group"></div>
                                         <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-success mb-2">Gửi</button>
+                                    <button type="submit" class="btn btn-success mb-2" style="">Gửi</button>
                                 </div>
                                 @if($commentDetails)
                                     @foreach($commentDetails as $commentDetail)
@@ -198,7 +227,7 @@
                                             <div class="cont pt-3 pb-1">
                                                 <div class="comment__txt p-3" style="background-color:#32936F; border-radius: 10px;">
                                                     <div class="d-flex pb-2">
-                                                        <p class="comment__name mb-1" style="color: #fff; font-size: 20px;font-family: inherit;"><b>{{$commentDetail->getComment->name}}</b></p>
+                                                        <p class="comment__name mb-1" style="color: #fff; font-size: 20px;font-family: inherit;"><i class=" fas fa-id-card-alt mr-2"></i><b>{{$commentDetail->getComment->name}}</b></p>
                                                         <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #fff">{{$commentDetail->created_at}}</div>
                                                     </div>
 

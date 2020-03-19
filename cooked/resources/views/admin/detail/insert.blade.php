@@ -54,7 +54,13 @@
 	                        <label><h4>Chú ý</h4></label>
 	                        <input class="form-control" name="note" placeholder="Nhập tên gia vị" />
 	                    </div>
-
+						
+						<div class="row">
+	                    	<div class="form-group col-sm-4">
+	                        <label><h4>Ảnh background</h4></label>
+	                        <input type="file" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" />
+	                    </div>
+	                    
 
 	                    <div class="row">
 	                    	<div class="form-group col-sm-4">

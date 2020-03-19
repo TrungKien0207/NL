@@ -6,7 +6,7 @@
 	    <div class="cuisine-box " data-micron="bounce">
 	       <div class="choice_item">
 	          <a href="{{route('get.category.product',[$cat->c_tenkd,$cat->id])}}" target="_blank">
-	             <img src="./image/nuong.png" alt="nướng">
+	             <img src="image/img_category/{{$cat->c_img}}" alt="{{$cat->c_ten}}" c>
 	             <span style="font-size: 15px;"> {{$cat->c_ten}} </span>
 	          </a> 
 	       </div>

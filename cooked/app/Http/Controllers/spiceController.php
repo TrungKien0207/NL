@@ -59,13 +59,12 @@ class spiceController extends Controller
         // dd($request->all());
     	$this->validate($request, 
     		[
-                'name' => 'required|unique:spice,s_ten|min:2|max:50',
+                'name' => 'required|min:2|max:50',
                 'idPD' => 'required',
                 's_soluong' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                'name.unique' => 'Tên món ăn đã tồn tại',
                 'name.min' => 'Tên món ăn phải có tối thiểu 2 kí tự!',
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 

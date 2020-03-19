@@ -40,6 +40,7 @@ class detailController extends Controller
         $detail->content = $request->content;
         $detail->contentkd = str::slug($request->content);
         $detail->note = $request->note;
+        $detail->bg = $request->bg;
         $detail->step = $request->step;
         $detail->img1 = $request->image1;
         $detail->img2 = $request->image2;
@@ -78,6 +79,7 @@ class detailController extends Controller
         $detail->contentkd = str::slug($request->content);
         $detail->step = $request->step;
         $detail->note = $request->note;
+        $detail->bg = $request->bg;
         $detail->img1 = $request->image1;
         $detail->img2 = $request->image2;
         $detail->img3 = $request->image3;

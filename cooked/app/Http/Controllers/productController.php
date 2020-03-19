@@ -33,16 +33,15 @@ class productController extends Controller
         $product = product::find($id);
         $this->validate($request, 
             [
-                'name' => 'required|unique:product,ten_sp|min:2|max:50',
+                'name' => 'required|min:2|max:50',
                 'idCategory' => 'required',
                 'idCategory' => 'required',
                 
-                'content' => 'required|unique:product,content',
-                'img' => 'required|unique:product,anh_sp',
+                'content' => 'required',
+                'img' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                'name.unique' => 'Tên món ăn đã tồn tại',
                 'name.min' => 'Tên món ăn phải có tối thiểu 2 kí tự!',
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
@@ -51,11 +50,10 @@ class productController extends Controller
                
 
                 'content.required' => 'Bạn chưa nhập nội dung.',
-                'content.unique' => 'Nội dung món ăn đã tồn tại',
+                
 
                 'img.required' => 'Bạn chưa chọn hình ảnh',
-                'img.unique' => 'Hình ảnh đã tồn tại',
-
+               
             ]);
 
         $product->idType = $request->idType;

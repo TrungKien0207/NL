@@ -25,12 +25,12 @@ class timeCookController extends Controller
         $timeCook = timeCook::find($id);
         $this->validate($request, 
             [
-                'name' => 'required|unique:timeCook,t_ten|max:50',
+                'name' => 'required|max:50',
                 'idProD' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                'name.unique' => 'Tên món ăn đã tồn tại',
+                
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
                 'idProD.required' => 'Bạn chưa chọn món ăn',
@@ -54,12 +54,12 @@ class timeCookController extends Controller
         // dd($request->all());
     	$this->validate($request, 
     		[
-                'name' => 'required|unique:timeCook,t_ten|max:50',
+                'name' => 'required|max:50',
                 'idProD' => 'required',
             ], 
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                'name.unique' => 'Tên món ăn đã tồn tại',
+               
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
                 'idProD.required' => 'Bạn chưa chọn món ăn',
