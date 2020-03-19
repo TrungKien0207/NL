@@ -28,10 +28,11 @@
 					
 	                <form action="admin/material/insert" method="post">
 	                	@csrf
-	                	<div class="form-group">
-	                        <label><h4>Món ăn</h4></label>
-	                        <select class="form-control" name="idProduct" placeholder="Nhập tên món ăn">
-	                        	<option value="">Món ăn</option>
+	                	<div class="form-group" >
+	                        <label id="choose"  for="option"><h4>Món ăn</h4></label>
+	                        <select class="form-control" name="idProduct" placeholder="Nhập tên món ăn" >
+
+	                        	<option value="" >Món ăn</option>
 				                @if(isset($product))
 				                    @foreach($product as $pro)
 				   						<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
