@@ -121,18 +121,6 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-            <li>
-                <a href="#"><i class="fa fa-users fa-fw"></i> Thời gian nấu<span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="admin/timeCook/list">Danh sách thời gian</a>
-                    </li>
-                    <li>
-                        <a href="admin/timeCook/insert">Thêm thời gian nấu</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
-            </li>
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

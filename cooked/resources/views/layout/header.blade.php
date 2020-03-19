@@ -13,26 +13,30 @@
       </li>
 
       <li class="nav-item dropdown ">
-        <a style="font-size: 18px" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a style="font-size: 18px; color: #FFF;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
           Loại món ăn
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         
+            
           
+        </div>
         </div>
       
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: #FFF;">
           Món ăn tiêu biểu
         </a>
-        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
           @if($type)
             @foreach($type as $ty)
-              <a class="dropdown-item" href="{{route('get.detail.product',[$ty->tenkd,$ty->id])}}">{{$ty->ten_ty}}</a>
+              <a class="dropdown-item" href="#">{{$ty->ten_ty}}</a>
             @endforeach
           @endif
-        </div> -->
+        </div>
       </li>
 
     </ul>

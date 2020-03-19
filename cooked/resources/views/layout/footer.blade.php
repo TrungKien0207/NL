@@ -6,46 +6,47 @@
 	                 <div class="col-sm-7 col-md-7">
 	                    <div class="row ">
 	                          <div class="col-6 ">
-	                             <h5 class="ct-name">Công thức</h5>
+	                             <h5 class="ct-name">Loại món ăn</h5>
+	                             
+	                             @foreach($category as $cat)
 	                             <div class="ct-name-text">
-	                                <p><a href="#">Món nướng</a></p>
-	                                <p><a href="#">Món chiên</a></p>
-	                                <p><a href="#">Món xào</a></p>
-	                                <p><a href="#">Món hấp</a></p>
-	                                <p><a href="#">Món luộc</a></p>
-	                                <p><a href="#">Món chay</a></p>
+	                                <p><a href="#">{{$cat->c_ten}}</a></p>
 	                             </div>
+	                             @endforeach
 	                          </div>
 	                          <div class="col-6">
-	                             <h5 class="ct-name ">Món ăn ngày lễ</h5>
+	                             <h5 class="ct-name ">Món ăn tiêu biểu</h5>
+
+	                             @foreach($type as $ty)
 	                             <div class="ct-name-text">
-	                                <p><a href="#">Dịp Tết</a></p>
-	                                <p><a href="#">Ngày Dỗ</a></p>
-	                                <p><a href="#">Tất niên</a></p>
-	                                <p><a href="#">Sinh nhật</a></p>
+	                                <p><a href="#">{{$ty->ten_ty}}</a></p>
 	                             </div>
+								@endforeach
+
 	                          </div>
 	                    </div>
 	                 </div>
-	                 <!-- <div class="col-sm-4 col-md-4 pl-2 pr-3">
+	                 <div class="col-sm-5 col-md-5 pl-2 pr-3">
 	                    <div class="articles ">
-	                          <h5>Articles</h5>
+	                          <h5></h5>
 	                          <div class="articles-list d-flex ">
-	                             <img src="./thumb-2.jpg" alt="..." >
-	                             <div class="articles-text pl-4 pt-1 ">
-	                                <h3><a href="#">Introducing the new Jumpstart brand</a></h3>
-	                                <p>October 21th</p>
-	                             </div>
-	                          </div><div class="clearfix"></div>
-	                          <div class="articles-list d-flex">
-	                             <img src="./thumb-1.jpg" alt="..." >
-	                             <div class="articles-text pl-4 pt-1">
-	                                <h3><a href="#">Making the most of team-building sessions</a></h3>
-	                                <p>October 2nd</p>
-	                             </div>
+	                             <div class="articles-text pl-4 pt-1 text-justify">
+	                                <h6 style="font-size: 20px;">Cảm giác người ta ăn đồ của mình rồi quay sang khen ngon, nó hạnh phúc hơn được cho cả cục tiền</h6>
+	                                
+	                             </div>	                             
 	                          </div>
+	                          <p class="text-right" style="color: #fff;">_ Alain Nguyễn _</p>
+
+	                          <div class="articles-list d-flex text-justify pt-3">
+	                             <div class="articles-text pl-4 pt-1 ">
+	                                <h6 style="font-size: 20px;">Nấu ăn là một nghề đòi hỏi sức khỏe, gan lì, tầm nhìn và tư duy mở. Còn gì tuyệt vời hơn khi đi khắp thế giới và thưởng thức những món hảo hạng nhất</h6>
+	                                
+	                             </div>	                             
+	                          </div>
+	                          <p class="text-right" style="color: #fff;">_ Gordon Ramsay _</p>
+	                          <div class="clearfix"></div>
 	                    </div>
-	                 </div> -->
+	                 </div>
 	            </div>
 	        </div>
 	     </div>
