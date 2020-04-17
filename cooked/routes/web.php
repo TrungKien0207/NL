@@ -146,12 +146,12 @@ Route::post('login','PageController@postLogin');
 Route::get('dang-xuat','PageController@getLogout')->name('post.logout.user');
 
 Route::post('danh-gia/{id}', 'commentController@postComment');
-
-Route::get('user', 'PageController@getUserProfile');
-Route::post('user', 'PageController@postUserProfile');
+// Route::get('user', 'PageController@index')->name('user_index');
+Route::get('user/{id}', 'PageController@getUserProfile')->name('user_edit');
+Route::post('user/{id}', 'PageController@postUserProfile');
 
 Route::get('signup', 'PageController@getDangki');
 Route::post('signup', 'PageController@postDangki');
 
-
+Route::get('search', 'PageController@findProduct')->name('find.product');
 

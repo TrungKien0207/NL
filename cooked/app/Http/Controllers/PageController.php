@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use App\User;
 use App\category;
@@ -16,6 +17,7 @@ use App\spice;
 use App\timeCook;
 use App\level;
 use App\comment;
+
 
 
 class PageController extends Controller
@@ -34,11 +36,12 @@ class PageController extends Controller
     }
 
 	}
-    function homePage() {
-    	return view('pages.homepage');
+    function homePage(Request $request) {
+      return view('pages.homepage');
     }
     
     public function getListProduct(Request $request){
+
         $url = $request->segment(2);
         $url = preg_split('/(-)/i', $url);
         // dd($url);
@@ -49,7 +52,7 @@ class PageController extends Controller
             // $productDetail =  product::where(['idType'=> $id])->get();
            $productDetails =  product::where('id',$id)->get();
            $postProduct = product::find($id);
-           // dd($productDetails);
+          
            $getDetails = detail::where('idproduct',$id)->get();
 
            $getMaterials = material::where('idProduct', $id)->get();
@@ -129,15 +132,24 @@ class PageController extends Controller
         return redirect()->back();
     }
 
-    public function getUserProfile() {
-      return view('pages.user');
+
+    // public function index(request $request){
+    //   return view('pages.user');
+    // }
+
+    public function getUserProfile($id) {
+        $users = DB::table('users')->find($id);
+     return view('pages.user',compact('users'));
     }
 
-    public function postUserProfile(Request $request) {
-      $users = Auth::User();
+    public function postUserProfile(Request $request,$id) {
+      // dd($id);
+      // dd($request->all());
+      // $users = Auth::User();
       // dd($users);
-      
-    
+      // dd($request->all());
+       // $users = DB::table('users')->find($id);
+       $users = User::find($id);
       if($request->customSwitch1 == "on"){
 
         $this->validate($request, 
@@ -152,18 +164,22 @@ class PageController extends Controller
 
                 'pdag.same' => 'Mật khẩu không đúng!!',
             ]);
-
-        $users->name = $request->ten;
-        $users->email = $request->email;
         $users->password = bcrypt($request->password);
         $users->level = $request->quyen;
-        $users->save();
+      
+}
+        $users->name = $request->ten;
+        $users->email = $request->email;
+        
+       $users->save();
         
 
       
-    }
-    return redirect('user')->with('thongbao', 'Sửa thành công.');
+    
+    return redirect()->back()->with('thongbao', 'Sửa thành công.');
   }
+
+
 
   public function getDangki() {
     return view('pages.register');
@@ -203,5 +219,21 @@ class PageController extends Controller
         
 
       return redirect('signup')->with('thongbao', 'Đăng kí thành công.');
+  }
+
+  public function findProduct(request $request) {
+    // dd($request->all());
+    
+    $productAll = product::all();
+      $keyword = $request->keyword;
+      $productLists = product::where('ten_sp','like','%'.$keyword.'%')->get();
+        // dd($productLists->all());
+
+        $viewdata = [
+          'productLists' => $productLists,
+          'productAll' => $productAll,
+          'keyword' => $keyword
+        ];
+    return view('pages.find', $viewdata);
   }
 }

@@ -14,8 +14,8 @@
    
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <link rel="stylesheet" href="{{asset('css/mainx.css')}}">
-    <link rel="stylesheet" href="{{asset('css/details.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
    
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 

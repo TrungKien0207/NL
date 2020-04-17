@@ -41,25 +41,29 @@
 
     </ul>
 
-    <form class="form-inline my-2 my-lg-0 mr-4">
-      <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-      <button class="btn btn-light my-2 my-sm-0" type="submit">Tìm kiếm</button>
+    <form class="form-inline my-2 my-lg-0 mr-4" action="{{route('find.product')}}">
+      <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Tìm kiếm" aria-label="Search">
+      <button class="btn btn-light my-2 my-sm-0"  type="submit">Tìm kiếm</button>
+      <div id="search-suggest" class="s-suggest"></div>
     </form>
     
     <li class="nav-item dropdown " style="list-style-type: none;"> 
-      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFF; font-size: 25px;"><i class="fas fa-sign-in-alt "></i>
+      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFF; font-size: 25px;"><i class="fas fa-sign-in-alt pr-1"></i>  
       </a>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
          @if(Auth::Check())
-          <a class="dropdown-item" href="user"><i class="fas fa-user-tie mr-2"></i><b>{{\Auth::user()->name}}</b></a>
+          <a class="dropdown-item" href="{{route('user_edit',\Auth::user()->id)}}"><i class="fas fa-user-tie mr-2"></i><b>{{\Auth::user()->name}}</b></a>
           <a class="dropdown-item" href="{{route('post.logout.user')}}"><i class="fas fa-sign-out-alt mr-2"></i>Đăng xuất</a>
         @else
           <a class="dropdown-item" href="login"><i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
           <a class="dropdown-item" href="signup"><i class="far fa-address-card mr-2"></i>Đăng kí</a>
         @endif
+
       </div>
     </li>
     
 
   </div>
 </nav>
+
+  

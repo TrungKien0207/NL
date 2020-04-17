@@ -7,12 +7,14 @@
 	    	<h4 class="d-flex justify-content-center h-100 pt-4">Hôm nay ăn gì? Tìm hiểu nào!</h4>
 		    
 		    <div class="search h-100" >
-		        <div class="d-flex justify-content-center h-100 pt-2">
-		           <div class="searchbar">
-		              <input class="search_input " type="text" name="" placeholder="Gà nướng, canh cải, cá kho tiêu,...">
-		              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-		           </div>
-		        </div>
+		    	<form action="{{route('find.product')}}">
+			        <div class="d-flex justify-content-center h-100 pt-2">
+			           <div class="searchbar">
+			              <input class="search_input " type="text" name="keyword" placeholder="Gà nướng, canh cải, cá kho tiêu,...">
+			              <!-- <button type="submit" class="search_icon"><i class="fas fa-search"></i></button> --> 
+			           </div>
+			        </div>
+		        </form>
 		    </div>
 
 	     	<!-- menu -->

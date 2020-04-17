@@ -187,17 +187,14 @@
                                         <img src="image/img_detail/{{$getDetail->img6}}" width="286px" height="286px" alt="4">
                                     </div>
                                     @endif
-
-
                                 </div>
-   
                     </div>
                    
 					@endforeach
-						@endif
+				@endif
 
                 </div>
-                <h3 class="text-center m-5"><b>Chúc bạn thành công.</b></h3>
+                <h3 class="text-center m-5"><b>Chúc bạn thành công!</b></h3>
             </div>
         </nav>
         @if(Auth::Check())
@@ -219,7 +216,7 @@
                                         <div class="input-group"></div>
                                         <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-success mb-2" style="">Gửi</button>
+                                    <button type="submit" class="btn btn-danger mb-2" style="">Gửi</button>
                                 </div>
                                 @if($commentDetails)
                                     @foreach($commentDetails as $commentDetail)

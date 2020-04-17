@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    
+}
+
+/* INTRO */
+
+.intro {
+    /* background-color: rgb(105, 104, 104); */
+}
+
+.intro_container {
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255); 
+    padding: 30px
+}
+
+.intro .intro_container .intro_box .intro_image img{
+    border-radius: 10px;
+}
+
+.intro .intro_container .intro_box .end_content {
+    padding: 10px 50px;
+    margin: 0 120px;
+    background-color: #32936F;
+}
+
+/* INGREDIENTS */
+.ingredients .ingredients_container {
+    width: 860px;
+    padding: 30px;
+    border: 1px solidrgb(238, 238, 238);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255); 
+}
+
+.ingredients .ingredients_container .ingredients_name {
+    text-align: center;
+    margin: 0 90px;
+}
+
+
+.ingredients .ingredients_container .ingredients_name .ingredients_content {
+    margin-left: 100px;
+}
+
+.ingredients .ingredients_container .ingredients_name .ingredients_content ul li p {
+    background-color: beige;
+}
+
+/* STEPS TO DO */
+.cook .cook_container {
+    width: 860px;
+    padding: 30px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255); 
+}
+
+.cook .intro_container .cook_box .cook_first {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.cook .cook_container .cook_box .step .step_box {
+    padding: 2px 15px;
+    border-radius: 2px solid red;
+}
+
+.cook .cook_container .cook_box .step_box_img {
+    padding: 10px 48px 0 140px;
+}
+
+.cook .cook_container .cook_box .step_box_img img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #c9c9c9;;
+}

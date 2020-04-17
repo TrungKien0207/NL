@@ -6,23 +6,7 @@
 	                 <div class="col-sm-7 col-md-7">
 	                    <div class="row ">
 	                          <div class="col-6 ">
-	                             <h5 class="ct-name">Loại món ăn</h5>
-	                             
-	                             @foreach($category as $cat)
-	                             <div class="ct-name-text">
-	                                <p><a href="#">{{$cat->c_ten}}</a></p>
-	                             </div>
-	                             @endforeach
-	                          </div>
-	                          <div class="col-6">
-	                             <h5 class="ct-name ">Món ăn tiêu biểu</h5>
-
-	                             @foreach($type as $ty)
-	                             <div class="ct-name-text">
-	                                <p><a href="#">{{$ty->ten_ty}}</a></p>
-	                             </div>
-								@endforeach
-
+	                             <!--  -->
 	                          </div>
 	                    </div>
 	                 </div>

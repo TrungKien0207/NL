@@ -22,7 +22,7 @@
 							{{session('thongbao')}}
 						</div>
 					@endif
-					<form class="needs-validation" action="user" method="POST">
+					<form class="needs-validation" method="POST">
 						@csrf
 					  <div class="form-row">
 
@@ -69,7 +69,7 @@
 					    </div>
 					  </div>
 					  <button class="btn btn-info" type="submit">Lưu</button>
-					</form>
+			</form>
 				</div>
 			</div>
 		</div>			
