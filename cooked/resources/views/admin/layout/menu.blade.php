@@ -1,18 +1,6 @@
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
-            <!-- <li class="sidebar-search">
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div> -->
-                <!-- /input-group -->
-            <!-- </li> -->
-    
             <li>
                 <a href="#"><i class="fa fa-users fa-fw"></i> Người dùng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
@@ -26,7 +14,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Loại món ăn<span class="fa arrow"></span></a>
+                <a href="#"><i class="fas fa-align-justify"></i> Loại món ăn<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="admin/category/list">Danh sách loại món ăn</a>
@@ -50,7 +38,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-cube fa-fw"></i>Món ăn<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-cube fa-fw"></i> Món ăn<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="admin/product/list">Danh sách món ăn</a>
@@ -98,7 +86,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-users fa-fw"></i>Chi tiết<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-users fa-fw"></i> Chi tiết<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="admin/detail/list">Danh sách chi tiết</a>

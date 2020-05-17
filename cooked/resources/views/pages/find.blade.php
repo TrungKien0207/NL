@@ -2,7 +2,7 @@
 
 @section('content')
     @if($productLists)
-        <?php 
+        <?php
             function changeColor($tr, $keyword) {
                 return str_replace($keyword, "<span style='color:red;'>$keyword</span>", $tr);
             }
@@ -25,9 +25,9 @@
                                         <p style="font-size: 14px;">
                                             {!! changeColor($pro->content, $keyword) !!}
                                         </p>
-                                    </div>   
+                                    </div>
                                 </a>
-                            </div>  
+                            </div>
                         </div>
                     @endforeach
                 </div>

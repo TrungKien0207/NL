@@ -1,5 +1,5 @@
 @extends('admin.layout.index')
- 
+
 @section('content')
 	<!-- Page Content -->
 	<div id="page-wrapper">
@@ -25,9 +25,9 @@
 							{{session('thongbao')}}
 						</div>
 					@endif
-					
+
 	                <form action="admin/category/edit/{{$category->id}}" method="POST">
-	                	<input type="hidden" name="_token" value="{{csrf_token()}}" /> 
+	                	<input type="hidden" name="_token" value="{{csrf_token()}}" />
 	                	{{csrf_field()}} <!-- có dòng này mới được submit -->
 	                    <div class="form-group">
 	                        <label>Tên loại món ăn</label>
@@ -38,9 +38,9 @@
 	                        <label><h4>Hình ảnh</h4></label>
 	                        <input type="file" class="form-control-file" name="c_img"/>
 	                    </div>
-	                    
-	                    <button type="submit" class="btn btn-info">Sửa</button>
-	                    <button type="reset" class="btn btn-info">Đặt lại</button>
+
+	                    <button type="submit" class="btn btn-warning">Sửa</button>
+	                    <button type="reset" class="btn btn-danger">Đặt lại</button>
 	                </form>
 	            </div>
 	        </div>

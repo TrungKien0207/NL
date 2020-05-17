@@ -11,17 +11,17 @@
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-   
+
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
-   
+    <link rel="stylesheet" href="{{asset('css/mainsl.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detailx.css')}}">
+
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
-   
+
    <script src="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
@@ -37,7 +37,7 @@
 
    <!-- content -->
    @yield('content')
-   
+
 	<!-- footer -->
 	@include('layout.footer')
 

@@ -8,8 +8,8 @@
                 <div class="intro_box">
 
                 @if($getDetails)
-                    @foreach($getDetails as $getDetail)   
-                    @if($getDetail->bg != null)  
+                    @foreach($getDetails as $getDetail)
+                    @if($getDetail->bg != null)
                     <div class="intro_image w-100">
                         <img src="image/img_detail/{{$getDetail->bg}}" alt="background">
                     </div>
@@ -45,7 +45,7 @@
                         </div>
 						 @endforeach
 						@endif
-						
+
                         <div class="end_content d-flex justify-content-between pt-2 rounded-pill shadow mt-3">
                            <!--  <div>
                                 <h5 class="text-center">Nguyên liệu</h5>
@@ -97,7 +97,7 @@
                                 </ul>
                             </div>
                     @endif
-                    
+
                     @if( $getSpices )
                         <div class="con ">
                             <div class="ingredients_content pt-2">
@@ -119,10 +119,10 @@
             <div class="cook_container shadow">
                 <div class="cook_box">
                     <div class="cook_first d-flex justify-content-between border-bottom">
-                        <div> 
+                        <div>
                             <h4>Cách làm</h4>
                         </div>
-                        
+
                         @if( $timecooks )
                             @foreach( $timecooks as $timecook )
                         <div class="d-flex">
@@ -134,7 +134,7 @@
                     </div>
 
 							@if($getDetails)
-							@foreach($getDetails as $getDetail)			
+							@foreach($getDetails as $getDetail)
                     <div>
                         <div class="step pl-5 pr-5 pt-5 d-flex">
                             <div class="step_number pr-4 ">
@@ -146,18 +146,18 @@
                             </div>
                             <div class="step_content text-justify">
                                 <p>{{$getDetail->content}}</p>
-                                
+
                                 @if($getDetail->note != null)
                                     <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>{{$getDetail->note}}</p>
                                 @endif
                             </div>
                         </div>
-                            
+
                                 <div class="step_box_img row row-cols-2">
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img1}}" width="286px" height="286px" alt="1">
                                     </div>
-                                    
+
                                     @if($getDetail->img2 != null)
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img2}}" width="286px" height="286px" alt="2">
@@ -169,7 +169,7 @@
                                         <img src="image/img_detail/{{$getDetail->img3}}" width="286px" height="286px" alt="3">
                                     </div>
                                     @endif
-                                    
+
                                     @if($getDetail->img4 != null)
                                     <div class="step_img col p-3">
                                         <img src="image/img_detail/{{$getDetail->img4}}" width="286px" height="286px" alt="4">
@@ -189,7 +189,7 @@
                                     @endif
                                 </div>
                     </div>
-                   
+
 					@endforeach
 				@endif
 
@@ -206,10 +206,10 @@
                     <form action="danh-gia/{{$postProduct->id}}" method="post">
                     @csrf
                         <div class="container-newsletter">
-                            
+
                             <div class="email">
                                 <h4 class="text-left mb-3"><b>Bình luận</b></h4>
-                            
+
                                 <div class="container-email d-flex justify-content-center">
                                     <div class="form-group mx-sm-3 mb-2 ">
                                         <label for="inputPassword2" class="sr-only ">Đóng góp</label>
@@ -222,13 +222,13 @@
                                     @foreach($commentDetails as $commentDetail)
                                         <div class="comment pl-5 pr-4">
                                             <div class="cont pt-3 pb-1">
-                                                <div class="comment__txt p-3" style="background-color:#32936F; border-radius: 10px;">
+                                                <div class="comment__txt p-3" style="background-color:#DDDDDD   ; border-radius: 10px;">
                                                     <div class="d-flex pb-2">
-                                                        <p class="comment__name mb-1" style="color: #fff; font-size: 20px;font-family: inherit;"><i class=" fas fa-id-card-alt mr-2"></i><b>{{$commentDetail->getComment->name}}</b></p>
-                                                        <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #fff">{{$commentDetail->created_at}}</div>
+                                                        <p class="comment__name mb-1" style="color: #000; font-size: 20px;font-family: inherit;"><i class=" fas fa-id-card-alt mr-2"></i><b>{{$commentDetail->getComment->name}}</b></p>
+                                                        <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #000">{{$commentDetail->created_at}}</div>
                                                     </div>
 
-                                                    <div class="comment__conent" style="color: #fff;">{{$commentDetail->contentC}}</div>
+                                                    <div class="comment__conent" style="color: #000">{{$commentDetail->contentC}}</div>
                                                 </div>
                                             </div>
                                         </div>
