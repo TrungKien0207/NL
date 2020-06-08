@@ -14,11 +14,12 @@
     <link href="admin_asset/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="admin_asset/dist/css/sb-admin-2m.css" rel="stylesheet">
+    <link href="admin_asset/dist/css/sb-admin-2d.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="admin_asset/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- DataTables CSS -->
     <link href="admin_asset/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 

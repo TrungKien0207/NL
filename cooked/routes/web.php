@@ -22,7 +22,7 @@ Route::get('admin/logout', 'UserController@getLogoutAdmin');
 Route::group(['prefix'=>'admin'], function() {
 	Route::group(['prefix'=>'category'], function() {
 		Route::get('list', 'categoryController@getList');
-		
+
 		Route::get('edit/{id}', 'categoryController@getEdit');
 		Route::post('edit/{id}', 'categoryController@postEdit');
 
@@ -34,7 +34,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'type'], function() {
 		Route::get('list', 'typeController@getList');
-		
+
 		Route::get('edit/{id}', 'typeController@getEdit');
 		Route::post('edit/{id}', 'typeController@postEdit');
 
@@ -46,7 +46,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'product'], function() {
 		Route::get('list', 'productController@getList');
-		
+
 		Route::get('edit/{id}', 'productController@getEdit');
 		Route::post('edit/{id}', 'productController@postEdit');
 
@@ -58,7 +58,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'material'], function() {
 		Route::get('list', 'materialController@getList');
-		
+
 		Route::get('edit/{id}', 'materialController@getEdit');
 		Route::post('edit/{id}', 'materialController@postEdit');
 
@@ -70,7 +70,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'spice'], function() {
 		Route::get('list', 'spiceController@getList');
-		
+
 		Route::get('edit/{id}', 'spiceController@getEdit');
 		Route::post('edit/{id}', 'spiceController@postEdit');
 
@@ -82,7 +82,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'timeCook'], function() {
 		Route::get('list', 'timeCookController@getList');
-		
+
 		Route::get('edit/{id}', 'timeCookController@getEdit');
 		Route::post('edit/{id}', 'timeCookController@postEdit');
 
@@ -94,7 +94,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'detail'], function() {
 		Route::get('list', 'detailController@getList');
-		
+
 		Route::get('edit/{id}', 'detailController@getEdit');
 		Route::post('edit/{id}', 'detailController@postEdit');
 
@@ -106,7 +106,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'User'], function() {
 		Route::get('list', 'UserController@getList');
-		
+
 		Route::get('edit/{id}', 'UserController@getEdit');
 		Route::post('edit/{id}', 'UserController@postEdit');
 
@@ -118,7 +118,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 	Route::group(['prefix'=>'level'], function() {
 		Route::get('list', 'levelController@getList');
-		
+
 		Route::get('edit/{id}', 'levelController@getEdit');
 		Route::post('edit/{id}', 'levelController@postEdit');
 
@@ -140,6 +140,15 @@ Route::get('homepage', 'PageController@homePage')->name('homepage');
 Route::get('product/{slug}-{id}', 'PageController@getListProduct')->name('get.detail.product');
 
 Route::get('danh-muc/{slug}-{id}', 'PageController@getListCategory')->name('get.category.product');
+
+Route::get('menu/{slug}-{id}', 'PageController@getListType')->name(
+	'get.type.product');
+
+Route::get('menuc/{slug}-{id}', 'PageController@getMenuCate')->name(
+	'get.menuc.product');
+
+Route::get('menut/{slug}-{id}', 'PageController@getMenuTyp')->name(
+	'get.menut.product');
 
 Route::get('login','PageController@getLogin');
 Route::post('login','PageController@postLogin');

@@ -1,37 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #051B35; ">
 
-   <a class="navbar-brand text-center" href="homepage"><i class="fas fa-book" style="color: #FFF ;"></i><h3 style="color: #FFF ;"><b>Cooked</b></h3></a>
+   <a class="navbar-brand text-center nav-type" href="homepage"><h2 class="ki logow"> Cooked</h2></a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
    </button>
 
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-         <li class="nav-item active">
-            <a class="nav-link" href="homepage" style="font-size: 18px; color: #FFF ;">Trang chủ </a>
+         <li class="nav-item active nav-type pt-3">
+            <a class="nav-link" href="homepage" style="font-size: 18px; color: #F8F8F8; ;"> <p class="ki">Trang chủ </p></a>
          </li>
 
-         <li class="nav-item dropdown ">
-            <a style="font-size: 18px; color: #FFF;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Loại món ăn</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-
-
+         <li class="nav-item dropdown pt-3">
+            <a class="nav-link dropdown-toggle nav-type"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="font-size: 18px; color: #F8F8F8;">
+               Loại món ăn
+            </a>
+            <div class="dropdown-menu drop-link" style="" aria-labelledby="navbarDropdown" >
+               <div class="">
+               @if(isset($cate))
+                  @foreach($cate as $ct)
+                     <div class="nav-type"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menuc.product',[$ct->c_tenkd,$ct->id])}}">{{$ct->c_ten}}</a></div>
+                  @endforeach
+               @endif
                </div>
             </div>
          </li>
 
-         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: #FFF;">
+         <li class="nav-item dropdown pt-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: #F8F8F8;font-size: 18px;">
                Món ăn tiêu biểu
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-               @if($type)
-                  @foreach($type as $ty)
-                     <a class="dropdown-item" href="#">{{$ty->ten_ty}}</a>
-                  @endforeach
-               @endif
+            <div class="dropdown-menu drop-link" aria-labelledby="navbarDropdown" >
+            @if(isset($typ))
+               @foreach($typ as $tt)
+                  <div class="nav-type"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menut.product',[$tt->tenkd,$tt->id])}}">{{$tt->ten_ty}}</a></div>
+               @endforeach
+            @endif
             </div>
          </li>
 

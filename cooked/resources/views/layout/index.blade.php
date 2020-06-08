@@ -14,10 +14,11 @@
 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <link rel="stylesheet" href="{{asset('css/mainsl.css')}}">
-    <link rel="stylesheet" href="{{asset('css/detailx.css')}}">
+    <link rel="stylesheet" href="{{asset('css/maink.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detailp.css')}}">
 
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
@@ -43,6 +44,6 @@
 
    @yield('script')
 
-   <script src="./script.js"></script>
+   <script src="./scriptt.js"></script>
 </body>
 </html>

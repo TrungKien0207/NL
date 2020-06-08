@@ -6,7 +6,7 @@ $(document).ready(function() {
         paginationSpeed : 400,
         singleItem:true
         // "singleItem:true" is a shortcut for:
-        // items : 1, 
+        // items : 1,
         // itemsDesktop : false,
         // itemsDesktopSmall : false,
         // itemsTablet: false,
@@ -21,7 +21,7 @@ $('.owl-carousel').owlCarousel({
     autoplay:true,
     animation: 2000,
     smartSpeed: 500,
-    autoplayTimeout:3000,
+    autoplayTimeout:2000,
     autoplayHoverPause:true,
     responsive:{
         0:{
@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100){
 			$('#myBtn').fadeIn();
-		} 
+		}
 		else{
 			$('#myBtn').fadeOut();
 		}
@@ -91,19 +91,19 @@ $(function () {
 
 });
 // ************
-       $('#header-search').on('keyup', function() {
-           var search = $(this).serialize();
-           if ($(this).find('.m-input').val() == '') {
-               $('#search-suggest div').hide();
-           } else {
-               $.ajax({
-                   url: '/search',
-                   type: 'POST',
-                   data: search,
-               })
-               .done(function(res) {
-                   $('#search-suggest').html('');
-                   $('#search-suggest').append(res)
-               })
-           };
-       });
+$('#header-search').on('keyup', function() {
+   var search = $(this).serialize();
+   if ($(this).find('.m-input').val() == '') {
+       $('#search-suggest div').hide();
+   } else {
+       $.ajax({
+           url: '/search',
+           type: 'POST',
+           data: search,
+       })
+       .done(function(res) {
+           $('#search-suggest').html('');
+           $('#search-suggest').append(res)
+       })
+   };
+});

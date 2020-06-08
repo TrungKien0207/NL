@@ -49,7 +49,10 @@
 		@foreach($type as $ty => $val)
 			<nav class="form pt-5" data-aos="fade-up" data-aos-duration="3000">
 				<div class="box">
-					<div class="title pl-5 pr-4"><h3> <b>{{$val->ten_ty}}</b> </h3></div>
+					<div class="d-flex justify-content-between viewdetail">
+						<div class="title pl-5 pr-4"><h3> <b>{{$val->ten_ty}}</b> </h3></div>
+						<div class="pr-5 view_more"><a href="{{route('get.type.product',[$val->ten_ty,$val->id])}}">Xem thêm <i class="fas fa-angle-right"></i></a></div>
+					</div>
 					<div class="box_empty mb-4"></div>
 					@if(isset($val->getType) != null)
 						<div class="box_box row row-cols-4">
@@ -58,11 +61,11 @@
 									<div class="box_item ">
 										<a href="{{route('get.detail.product',[$value->tenkd,$value->id])}}">
 											<img src="image/img_product/{{$value->anh_sp}}" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
-											<div class="box_content p-2">
+											<div class="box_content p-3">
 												<h5>
 													<b>{{isset($value->ten_sp) ? $value->ten_sp : ''}}</b>
 												</h5>
-												<p style="font-size: 12px;">
+												<p>
 													{{isset($value->content) ? $value->content : ''}}
 												</p>
 											</div>

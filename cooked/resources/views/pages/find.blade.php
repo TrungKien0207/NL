@@ -4,7 +4,7 @@
     @if($productLists)
         <?php
             function changeColor($tr, $keyword) {
-                return str_replace($keyword, "<span style='color:red;'>$keyword</span>", $tr);
+                return str_replace($keyword, "<span style='color:#E80000; font-style: italic;'>$keyword</span>", $tr);
             }
          ?>
         <nav class="form pt-5" data-aos="fade-up" data-aos-duration="2000">
