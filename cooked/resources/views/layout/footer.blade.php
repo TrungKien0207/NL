@@ -26,7 +26,7 @@
 	                          <h5></h5>
 	                          <div class="articles-list d-flex ">
 	                             <div class="articles-text pl-4 pt-1 text-justify">
-	                                <h6 style="font-size: 20px;">Cảm giác người ta ăn đồ của mình rồi quay sang khen ngon, nó hạnh phúc hơn được cho cả cục tiền</h6>
+	                                <h6 style="font-size: 20px; color: #fff;">Cảm giác người ta ăn đồ của mình rồi quay sang khen ngon, nó hạnh phúc hơn được cho cả cục tiền</h6>
 
 	                             </div>
 	                          </div>
@@ -34,7 +34,7 @@
 
 	                          <div class="articles-list d-flex text-justify pt-3">
 	                             <div class="articles-text pl-4 pt-1 ">
-	                                <h6 style="font-size: 20px;">Nấu ăn là một nghề đòi hỏi sức khỏe, gan lì, tầm nhìn và tư duy mở. Còn gì tuyệt vời hơn khi đi khắp thế giới và thưởng thức những món hảo hạng nhất</h6>
+	                                <h6 style="font-size: 20px; color: #fff;">Nấu ăn là một nghề đòi hỏi sức khỏe, gan lì, tầm nhìn và tư duy mở. Còn gì tuyệt vời hơn khi đi khắp thế giới và thưởng thức những món hảo hạng nhất</h6>
 
 	                             </div>
 	                          </div>

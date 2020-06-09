@@ -3,6 +3,12 @@ body {
 
 }
 
+.name_d h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    font-weight: bold;
+}
+
 /* INTRO */
 
 .intro {
@@ -23,7 +29,7 @@ body {
 .intro .intro_container .intro_box .end_content {
     padding: 10px 50px;
     margin: 0 120px;
-    background-color: #465298;
+    background-color: #4038A9;
 }
 
 /* INGREDIENTS */

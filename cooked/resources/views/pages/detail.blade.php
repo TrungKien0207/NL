@@ -39,7 +39,7 @@
 						@foreach($productDetails as $productDetail)
 <!-- 						{{$productDetail}}
  -->                        <div class="second_content d-flex justify-content-center">
-                            <div>
+                            <div class="name_d">
                                 <h1><b>{{$productDetail->ten_sp}}</b></h1>
                             </div>
                         </div>
@@ -222,10 +222,10 @@
                                     @foreach($commentDetails as $commentDetail)
                                         <div class="comment pl-5 pr-4">
                                             <div class="cont pt-3 pb-1">
-                                                <div class="comment__txt p-3" style="background-color:#DDDDDD   ; border-radius: 10px;">
+                                                <div class="comment__txt pl-5" style="background-color:#fff   ; border-radius: 10px;">
                                                     <div class="d-flex pb-2">
                                                         <p class="comment__name mb-1" style="color: #000; font-size: 20px;font-family: inherit;"><i class=" fas fa-id-card-alt mr-2"></i><b>{{$commentDetail->getComment->name}}</b></p>
-                                                        <div class="comment__conent pl-4" style="font-size: 12px; font-family: monospace; color: #000">{{$commentDetail->created_at}}</div>
+                                                        <div class="comment__conent pl-4" style="font-size: 12px;letter-spacing: 1px; font-family: monospace; color: #000">{{$commentDetail->created_at}}</div>
                                                     </div>
 
                                                     <div class="comment__conent" style="color: #000">{{$commentDetail->contentC}}</div>

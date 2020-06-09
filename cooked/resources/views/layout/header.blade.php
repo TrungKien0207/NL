@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #051B35; ">
-
-   <a class="navbar-brand text-center nav-type" href="homepage"><h2 class="ki logow"> Cooked</h2></a>
+<nav class="navbar navbar-expand-lg navbar-light hd">
+   <a class="navbar-brand text-center nav-type" href="homepage"><div class="hi"></div></a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
    </button>
@@ -15,14 +14,17 @@
             <a class="nav-link dropdown-toggle nav-type"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="font-size: 18px; color: #F8F8F8;">
                Loại món ăn
             </a>
-            <div class="dropdown-menu drop-link" style="" aria-labelledby="navbarDropdown" >
-               <div class="">
+            <div class="dropdown-menu drop-link dl " style="width: 400px;" aria-labelledby="navbarDropdown" >
+
                @if(isset($cate))
+               <div class="row">
                   @foreach($cate as $ct)
-                     <div class="nav-type"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menuc.product',[$ct->c_tenkd,$ct->id])}}">{{$ct->c_ten}}</a></div>
+                     <div class="col-6 col-sm-4 justify-content-center">
+                        <div class="nav-type"><a class="dropdown-item navber-link " href="{{route('get.menuc.product',[$ct->c_tenkd,$ct->id])}}">{{$ct->c_ten}}</a></div>
+                     </div>
                   @endforeach
-               @endif
                </div>
+               @endif
             </div>
          </li>
 
@@ -30,12 +32,16 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: #F8F8F8;font-size: 18px;">
                Món ăn tiêu biểu
             </a>
-            <div class="dropdown-menu drop-link" aria-labelledby="navbarDropdown" >
-            @if(isset($typ))
-               @foreach($typ as $tt)
-                  <div class="nav-type"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menut.product',[$tt->tenkd,$tt->id])}}">{{$tt->ten_ty}}</a></div>
-               @endforeach
-            @endif
+            <div class="dropdown-menu drop-link dl" style="width: 580px;" aria-labelledby="navbarDropdown" >
+               @if(isset($typ))
+                  <div class="row">
+                     @foreach($typ as $tt)
+                        <div class="col-6 col-sm-4 ">
+                           <div class="nav-type justify-content-center"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menut.product',[$tt->tenkd,$tt->id])}}">{{$tt->ten_ty}}</a></div>
+                        </div>
+                     @endforeach
+                  </div>
+               @endif
             </div>
          </li>
 

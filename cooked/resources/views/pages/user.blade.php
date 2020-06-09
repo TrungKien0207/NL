@@ -4,7 +4,7 @@
 	<div class="row carousel-holder m-5 ">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<div class="panel panel-default border border-info rounded bg-light ">
+			<div class="panel panel-default usr">
 				<div class="panel-heading p-5">
 					<h4>Thông tin tài khoản	</h4>
 				</div>

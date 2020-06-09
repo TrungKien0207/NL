@@ -4,21 +4,20 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Conduct Cooked</title>
+   <title>FoodHouse</title>
 	<base href="{{asset('')}}">
-
-   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <link rel="icon" href="https://img.icons8.com/dusk/64/000000/chef-hat.png"/>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <link rel="stylesheet" href="{{asset('css/maink.css')}}">
-    <link rel="stylesheet" href="{{asset('css/detailp.css')}}">
+   <link rel="stylesheet" href="{{asset('css/maino.css')}}">
+   <link rel="stylesheet" href="{{asset('css/detailq.css')}}">
 
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
    <link rel="stylesheet" href="./css/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
