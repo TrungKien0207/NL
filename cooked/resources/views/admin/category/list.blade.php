@@ -21,7 +21,7 @@
                 <thead>
                     <tr align="center">
                         <th class="text-center">ID</th>
-                        <th class="text-center">Tên món ăn</th>
+                        <th class="text-center">Tên loại món ăn</th>
                         <th class="text-center">Tên không dấu</th>
                         <th class="text-center">Hình ảnh</th>
                         <th class="text-center">Xóa</th>

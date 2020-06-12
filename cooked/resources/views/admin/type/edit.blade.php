@@ -6,7 +6,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Loại món ăn
+				<h1 class="page-header">Loại món ăn tiêu biểu
 					<small>{{ isset($type->name ) ? $type->name  : ''}}</small>
 				</h1>
 			</div>

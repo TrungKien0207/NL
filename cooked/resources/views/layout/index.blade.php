@@ -30,7 +30,7 @@
 
 </head>
 <body >
-   <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="https://img.icons8.com/cute-clipart/64/000000/circled-chevron-up.png" width="40px;" /></button>
+   <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="https://img.icons8.com/cute-clipart/64/000000/circled-chevron-up.png" width="30px;" /></button>
 
    <!-- header -->
 	@include('layout.header')

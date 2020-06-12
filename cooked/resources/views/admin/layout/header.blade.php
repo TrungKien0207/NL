@@ -1,7 +1,7 @@
  <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; border: 0px solid #fff">
     <div class="navbar-header">
-        <a class="navbar-brand mb-4" href="./admin/User/list" style="font-size: 3em; color: #fff"><b>Cooked Admin</b></a>
+        <a class="navbar-brand mb-4" href="./admin/User/list" style="font-size: 3em; color: #fff"><b>Admin FoodHouse</b></a>
     </div>
     <!-- /.navbar-header -->
     <ul class="nav navbar-top-links navbar-right ">

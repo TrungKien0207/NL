@@ -43,7 +43,7 @@
 					</div>
 
 					<div class="form-group">
-						<label>Tên món ăn</label>
+						<label><h4>Mức độ</h4></label>
 						<select name="l_ten" class="form-control" placeholder="Chọn mức độ" value="{{old('l_ten',isset($level->l_ten) ? $level->l_ten : '')}}">
 							<option value="Khó">Khó</option>
 							<option value="Trung bình">Trung bình</option>

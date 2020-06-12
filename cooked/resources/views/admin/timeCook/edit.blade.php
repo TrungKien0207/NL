@@ -43,7 +43,7 @@
 					</div>
 
 					<div class="form-group">
-						<label>Tên món ăn</label>
+						<label> <h4>Tên món ăn</h4></label>
 						<input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('t_ten',isset($timeCook->t_ten) ? $timeCook->t_ten : '')}}" />
 					</div>
 

@@ -58,8 +58,8 @@
          </a>
          <div class="dropdown-menu dropdown-menu-right container-item" aria-labelledby="navbarDropdown">
             @if(Auth::Check())
-               <a class="dropdown-item dd-item" href="{{route('user_edit',\Auth::user()->id)}}"><img class="mr-2" src="https://img.icons8.com/bubbles/50/000000/id-short-hair-lady.png" width="40px" /><b>{{\Auth::user()->name}}</b></a>
-               <a class="dropdown-item dd-item" href="{{route('post.logout.user')}}"><img width="40px" class="mr-2" src="https://img.icons8.com/cute-clipart/64/000000/exit.png"/></i>Đăng xuất</a>
+               <a class="dropdown-item dd-item" href="{{route('user_edit',\Auth::user()->id)}}"><img class="mr-2" src="https://img.icons8.com/bubbles/50/000000/id-short-hair-lady.png" width="30px" /><b>{{\Auth::user()->name}}</b></a>
+               <a class="dropdown-item dd-item" href="{{route('post.logout.user')}}"><img width="30px" class="mr-2" src="https://img.icons8.com/cute-clipart/64/000000/exit.png"/></i>Đăng xuất</a>
             @else
                <a class="dropdown-item dd-item" href="login"><img width="30px" class="mr-2" src="https://img.icons8.com/cute-clipart/64/000000/enter-2.png"/>Đăng nhập</a>
                <a class="dropdown-item dd-item" href="signup"><img width="30px" class="mr-2" src="https://img.icons8.com/dusk/64/000000/sign-up.png"/>Đăng kí</a>

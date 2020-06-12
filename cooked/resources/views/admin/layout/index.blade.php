@@ -36,9 +36,9 @@
     <div id="wrapper">
         @include('admin.layout.header')
 
-        @yield('content');
+        @yield('content')
 
-        @yield('script');
+        @yield('script')
 
     </div>
     <!-- /#wrapper -->

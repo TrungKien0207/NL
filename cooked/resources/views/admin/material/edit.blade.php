@@ -44,12 +44,12 @@
 					</div>
 
 					<div class="form-group">
-						<label>Tên món ăn</label>
+						<label> <h4>Tên nguyên liệu</h4> </label>
 						<input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('r_ten',isset($material->r_ten) ? $material->r_ten : '')}}" />
 					</div>
 
 					<div class="form-group">
-						<label>Số lượng</label>
+						<label> <h4>Số lượng</h4> </label>
 						<input class="form-control" name="r_soluong" placeholder="Nhập tên loại món ăn" value="{{old('r_soluong',isset($material->r_soluong) ? $material->r_soluong : '')}}" />
 					</div>
 

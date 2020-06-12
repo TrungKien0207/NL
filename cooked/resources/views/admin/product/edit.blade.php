@@ -6,7 +6,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Loại món ăn
+				<h1 class="page-header">Món ăn
 					<small>{{ isset($product->name ) ? $product->name  : ''}}</small>
 				</h1>
 			</div>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="form-group">
-						<label>Tên món ăn</label>
+						<label><h4>Tên món ăn</h4></label>
 						<input class="form-control" name="name" placeholder="Nhập tên loại món ăn" value="{{old('ten_sp',isset($product->ten_sp) ? $product->ten_sp : '')}}" />
 					</div>
 
