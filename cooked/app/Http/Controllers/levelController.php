@@ -24,24 +24,24 @@ class levelController extends Controller
 
     public function postEdit(Request $request, $id) {
         $level = level::find($id);
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'l_ten' => 'required',
                 'idPDuct' => 'required',
-            ], 
+            ],
             [
                 'l_ten.required' => 'Bạn chưa chọn mức độ',
 
                 'idPDuct.required' => 'Bạn chưa chọn món ăn',
 
             ]);
-        
+
         $level->idPDuct = $request->idPDuct;
         $level->l_ten = $request->l_ten;
         $level->l_tenkd = str::slug($request->l_ten);
         $level->save();
 
-        return redirect('admin/level/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
+        return redirect('admin/level/edit/'.$id)->with('thongbao', 'Sửa thành công.');
     }
 
     public function getInsert() {
@@ -50,12 +50,11 @@ class levelController extends Controller
     }
 
     public function postInsert(Request $request) {
-        // dd($request->all());
-    	$this->validate($request, 
+    	$this->validate($request,
     		[
                 'name' => 'required',
                 'idPDuct' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa chọn mức độ',
 
@@ -67,7 +66,7 @@ class levelController extends Controller
         $level->l_ten = $request->name;
         $level->l_tenkd = str::slug($request->name);
         $level->save();
-        
+
 
     	return redirect('admin/level/insert')->with('thongbao', 'Thêm thành công.');
     }

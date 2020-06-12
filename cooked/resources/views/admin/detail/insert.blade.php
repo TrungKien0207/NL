@@ -58,39 +58,39 @@
 				<div class="row">
 					<div class="form-group col-sm-4">
 						<label><h4>Ảnh background</h4></label>
-						<input type="file" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" />
+						<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" style="padding: 5px;" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" /></div>
 					</div>
 
 
 					<div class="row">
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 1</h4></label>
-							<input type="file" class="form-control-file" name="image1" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" style="padding: 5px;" name="image1" placeholder="Nhập tên gia vị" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 2</h4></label>
-							<input type="file" class="form-control-file" name="image2" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image2" placeholder="Nhập tên gia vị" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 3</h4></label>
-							<input type="file" class="form-control-file" name="image3" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" style="padding: 5px;" class="form-control-file" name="image3" placeholder="Nhập tên gia vị" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 4</h4></label>
-							<input type="file" class="form-control-file" name="image4" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image4" placeholder="Nhập tên gia vị" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 5</h4></label>
-							<input type="file" class="form-control-file" name="image5" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image5" placeholder="Nhập tên gia vị" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 6</h4></label>
-							<input type="file" class="form-control-file" name="image6" placeholder="Nhập tên gia vị" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image6" placeholder="Nhập tên gia vị" style="padding: 5px;" /></div>
 						</div>
 					</div>
 

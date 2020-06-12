@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="admin">
     <meta name="author" content="">
-    <title>Admin</title>
+    <title>Admin FoodHouse</title>
     <base href="{{asset('')}}">
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/chef-hat.png"/>
     <!-- Bootstrap Core CSS -->
-    <link href="admin_asset/bower_components/bootstrap/dist/css/bootstrapn.min.css" rel="stylesheet">
+    <link href="admin_asset/bower_components/bootstrap/dist/css/bootstrapk.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="admin_asset/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="admin_asset/dist/css/sb-admin-2d.css" rel="stylesheet">
+    <link href="admin_asset/dist/css/sb-admin-2s.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="admin_asset/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,6 +37,8 @@
         @include('admin.layout.header')
 
         @yield('content');
+
+        @yield('script');
 
     </div>
     <!-- /#wrapper -->
@@ -62,6 +65,10 @@
         $('#dataTables-example').DataTable({
                 responsive: true
         });
+    });
+
+    $('#choose').click(function(){
+        $(this).siblings('select').toggle();
     });
     </script>
 </body>

@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class spice extends Model
 {
-     protected $table = "spice";
+   protected $table = "spice";
 
-      // spice of product
-	
+   // spice of product
+
 	public function product() {
     	return $this->belongsTo('App\product', 'idPD', 'id');
-    }
+   }
 }

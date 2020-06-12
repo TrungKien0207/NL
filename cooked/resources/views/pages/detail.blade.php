@@ -9,29 +9,30 @@
 
                 @if($getDetails)
                     @foreach($getDetails as $getDetail)
-                    @if($getDetail->bg != null)
-                    <div class="intro_image w-100">
-                        <img src="image/img_detail/{{$getDetail->bg}}" alt="background">
-                    </div>
-                    @endif
+                        @if($getDetail->bg != null)
+                            <div class="intro_image w-100">
+                                <img src="image/img_detail/{{$getDetail->bg}}" alt="background">
+                            </div>
+                        @endif
                     @endforeach
                 @endif
 
                     <div class="intro_content">
                         <div class="first_content d-flex justify-content-center pt-4">
-                            <!-- <div class="d-flex">
-                                <div class="p-1 text-muted"><p>Mục đích:</p></div>
-                                <div class="p-1"><p><i><b>Tiệc</b></i></p></div>
-                            </div> -->
 
-                            <!-- @if($category)
+                            @if($category)
+
                                 <div class="d-flex pl-3">
-                                    <div class="p-1 text-muted"><p>Cách thực hiện:</p></div>
-                                @foreach($category as $categorys)
-                                    <div class="p-1"><p><i><b>{{$categorys->c_ten}}</b></i></p></div>
-                                @endforeach
+                                <div class="p-1 text-muted"><p>Cách thực hiện:</p></div>
+
+                                    @foreach($category as $categorys)
+
+                                        <div class="p-1"><p><i><b>{{$categorys->c_ten}}</b></i></p></div>
+
+                                    @endforeach
                                 </div>
-                            @endif -->
+
+                            @endif
 
                         </div>
 
@@ -46,11 +47,7 @@
 						 @endforeach
 						@endif
 
-                        <div class="end_content d-flex justify-content-between pt-2 rounded-pill shadow mt-3">
-                           <!--  <div>
-                                <h5 class="text-center">Nguyên liệu</h5>
-                                <h4 class="text-center" style="color: #ffa500;">5</h4>
-                            </div> -->
+                        <div class="end_content d-flex justify-content-between pt-2 rounded-pill mt-3">
                             @if( $timecooks )
                                 @foreach( $timecooks as $timecook )
                             <div>
@@ -223,12 +220,12 @@
                                         <div class="comment pl-5 pr-4">
                                             <div class="cont pt-3 pb-1">
                                                 <div class="comment__txt pl-5" style="background-color:#fff   ; border-radius: 10px;">
-                                                    <div class="d-flex pb-2">
-                                                        <p class="comment__name mb-1" style="color: #000; font-size: 20px;font-family: inherit;"><i class=" fas fa-id-card-alt mr-2"></i><b>{{$commentDetail->getComment->name}}</b></p>
-                                                        <div class="comment__conent pl-4" style="font-size: 12px;letter-spacing: 1px; font-family: monospace; color: #000">{{$commentDetail->created_at}}</div>
+                                                    <div class="d-flex ">
+                                                        <p class="comment__name mb-1" style="color: #000; font-size: 20px;font-family: inherit;"><img src="https://img.icons8.com/bubbles/50/000000/user-male.png"/><b>{{$commentDetail->getComment->name}}</b></p>
+                                                        <div class="comment__conent pl-4 pt-3" style="font-size: 12px;letter-spacing: 1px; font-family: monospace; color: #909090">{{$commentDetail->created_at}}</div>
                                                     </div>
 
-                                                    <div class="comment__conent" style="color: #000">{{$commentDetail->contentC}}</div>
+                                                    <div class="comment__conent pl-5" style="color: #000">{{$commentDetail->contentC}}</div>
                                                 </div>
                                             </div>
                                         </div>

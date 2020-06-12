@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="admin_asset/vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="admin_asset/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="admin_asset/css/util.css">
-	<link rel="stylesheet" type="text/css" href="admin_asset/css/mains.css">
+	<link rel="stylesheet" type="text/css" href="admin_asset/css/maink.css">
 </head>
 <body>
 

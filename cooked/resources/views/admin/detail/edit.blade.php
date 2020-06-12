@@ -33,11 +33,11 @@
 					<div class="form-group">
 						<label><h4>Món ăn</h4></label>
 						<select class="form-control" name="idproduct" placeholder="Nhập tên món ăn" value="{{old('idproduct',isset($detail->idproduct) ? $detail->idproduct : '')}}">
-							<option value="">Món ăn</option>
+							<option value="" >Món ăn</option>
 							@if(isset($product))
-							@foreach($product as $pro)
-							<option value="{{$pro->id}}" {{old('idproduct',isset($detail->idproduct) ? $detail->idproduct : '') == ($pro->id) ? 'selected' : ''}}>{{$pro->ten_sp}}</option>
-							@endforeach
+								@foreach($product as $pro)
+									<option value="{{$pro->id}}" {{old('idproduct',isset($detail->idproduct) ? $detail->idproduct : '') == ($pro->id) ? 'selected' : ''}}>{{$pro->ten_sp}}</option>
+								@endforeach
 							@endif
 						</select>
 					</div>
@@ -59,39 +59,39 @@
 
 					<div class="form-group col-sm-4 ">
 						<label><h4>Ảnh background</h4></label>
-						<input type="file" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" value="{{old('bg',isset($detail->bg) ? $detail->bg : '')}}" />
+						<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="bg" placeholder="Nhập tên gia vị" value="{{old('bg',isset($detail->bg) ? $detail->bg : '')}}" style="padding: 5px;" /></div>
 					</div>
 
 					<div class="row border">
 
 						<div class="form-group col-sm-4 ">
 							<label><h4>Ảnh 1</h4></label>
-							<input type="file" class="form-control-file" name="image1" placeholder="Nhập tên gia vị" value="{{old('image1',isset($detail->img1) ? $detail->img1 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image1" placeholder="Nhập tên gia vị" value="{{old('image1',isset($detail->img1) ? $detail->img1 : '')}}" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 2</h4></label>
-							<input type="file" class="form-control-file" name="image2" placeholder="Nhập tên gia vị" value="{{old('image2',isset($detail->img2) ? $detail->img2 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image2" placeholder="Nhập tên gia vị" value="{{old('image2',isset($detail->img2) ? $detail->img2 : '')}}" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 3</h4></label>
-							<input type="file" class="form-control-file" name="image3" placeholder="Nhập tên gia vị" value="{{old('image3',isset($detail->img3) ? $detail->img3 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image3" placeholder="Nhập tên gia vị" value="{{old('image3',isset($detail->img3) ? $detail->img3 : '')}}" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 4</h4></label>
-							<input type="file" class="form-control-file" name="image4" placeholder="Nhập tên gia vị" value="{{old('image4',isset($detail->img4) ? $detail->img4 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image4" placeholder="Nhập tên gia vị" value="{{old('image4',isset($detail->img4) ? $detail->img4 : '')}}" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 5</h4></label>
-							<input type="file" class="form-control-file" name="image5" placeholder="Nhập tên gia vị" value="{{old('image5',isset($detail->img5) ? $detail->img5 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image5" placeholder="Nhập tên gia vị" value="{{old('image5',isset($detail->img5) ? $detail->img5 : '')}}" style="padding: 5px;" /></div>
 						</div>
 
 						<div class="form-group col-sm-4">
 							<label><h4>Ảnh 6</h4></label>
-							<input type="file" class="form-control-file" name="image6" placeholder="Nhập tên gia vị" value="{{old('image6',isset($detail->img6) ? $detail->img6 : '')}}" />
+							<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="image6" placeholder="Nhập tên gia vị" value="{{old('image6',isset($detail->img6) ? $detail->img6 : '')}}" style="padding: 5px;" /></div>
 						</div>
 					</div>
 

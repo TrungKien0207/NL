@@ -23,15 +23,15 @@ class materialController extends Controller
 
     public function postEdit(Request $request, $id) {
         $material = material::find($id);
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'name' => 'required|min:2|max:50',
                 'idProduct' => 'required',
                 'r_soluong' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                
+
                 'name.min' => 'Tên món ăn phải có tối thiểu 2 kí tự!',
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
@@ -47,7 +47,7 @@ class materialController extends Controller
         $material->r_soluong = $request->r_soluong;
         $material->save();
 
-        return redirect('admin/material/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
+        return redirect('admin/material/edit/'.$id)->with('thongbao', 'Sửa thành công.');
     }
 
     public function getInsert() {
@@ -56,16 +56,15 @@ class materialController extends Controller
     }
 
     public function postInsert(Request $request) {
-        // dd($request->all());
-    	$this->validate($request, 
+    	$this->validate($request,
     		[
                 'name' => 'required|min:2|max:50',
                 'idProduct' => 'required',
                 'r_soluong' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                
+
                 'name.min' => 'Tên món ăn phải có tối thiểu 2 kí tự!',
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
@@ -74,14 +73,14 @@ class materialController extends Controller
                 's_soluong.required' => 'Bạn chưa nhập số lượng',
 
             ]);
-        
+
     	$material = new material();
         $material->idProduct = $request->idProduct;
         $material->r_ten = $request->name;
         $material->r_tenkd = str::slug($request->name);
         $material->r_soluong = $request->r_soluong;
         $material->save();
-        
+
 
     	return redirect('admin/material/insert')->with('thongbao', 'Thêm thành công.');
     }

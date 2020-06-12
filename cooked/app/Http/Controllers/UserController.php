@@ -10,7 +10,7 @@ use App\User;
 
 class UserController extends Controller
 {
-    
+
     public function getList() {
     	$users = User::all();
     	return view('admin.User.list', ['users'=> $users]);
@@ -21,14 +21,14 @@ class UserController extends Controller
     }
 
     public function postInsert(Request $request) {
-        // dd($request->all());
-    	$this->validate($request, 
+
+    	$this->validate($request,
     		[
                 'name' => 'required|unique:users,name|min:4',
                 'email' => 'required|email|unique:users,email',
                 'pd' => 'required|min:6|max:32',
                 'pdag' => 'required|same:pd'
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên người dùng',
                 'name.min' => 'Tên người dùng phải có tối thiểu 4 kí tự!',
@@ -52,7 +52,7 @@ class UserController extends Controller
         $users->password = bcrypt($request->pd);
         $users->level = $request->quyen;
         $users->save();
-        
+
 
     	return redirect('admin/User/insert')->with('thongbao', 'Thêm thành công.');
     }
@@ -64,12 +64,12 @@ class UserController extends Controller
 
     public function postEdit(Request $request, $id) {
         $users = User::find($id);
-        $this->validate($request, 
+        $this->validate($request,
     		[
                 'name' => 'required|unique:users,name|min:1',
                 'email' => 'required|email',
                 'pdag' => 'same:pd'
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên người dùng',
                 'name.min' => 'Tên người dùng phải có tối thiểu 1 kí tự!',
@@ -80,13 +80,13 @@ class UserController extends Controller
 
                 'pdag.same' => 'Mật khẩu không đúng!!',
             ]);
-    	
+
     	$users->name = $request->name;
         $users->email = $request->email;
         $users->password = bcrypt($request->pd);
         $users->level = $request->quyen;
         $users->save();
-        
+
 
     	return redirect('admin/User/list')->with('thongbao', 'Sửa thành công.');
     }
@@ -104,11 +104,11 @@ class UserController extends Controller
     }
 
     public function postLoginAdmin(Request $request) {
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'email' => 'required|email',
                 'password' => 'required'
-            ], 
+            ],
             [
                 'email.required' => 'Bạn chưa nhập email',
                 'email.email' => 'Bạn chưa nhập đúng định dạng email',
@@ -117,13 +117,11 @@ class UserController extends Controller
             ]);
 
         if ( Auth::attempt([ 'email'=>$request->email, 'password'=>$request->password ])) {
-            // dd('hello cac to');
             return redirect('admin/product/list');
-            }
-        else {
+        } else {
             return redirect('admin/login')->with('thongbao', 'Email hoặc mật khẩu không đúng!');
         }
-    }   
+    }
 
     public function getLogoutAdmin() {
         Auth::logout();

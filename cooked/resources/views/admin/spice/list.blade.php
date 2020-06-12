@@ -38,12 +38,12 @@
                             <td>{{ $spi->s_tenkd }}</td>
                             <td>{{ $spi->s_soluong }}</td>
 
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/spice/delete/{{ $spi->id }}"> Xóa</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/spice/edit/{{ $spi->id }}">Sửa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="20px"/><a href="admin/spice/delete/{{ $spi->id }}"> Xóa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/cotton/64/000000/edit--v1.png"  width="20px"/>  <a href="admin/spice/edit/{{ $spi->id }}">Sửa</a></td>
                         </tr>
                     @endforeach
                 </tbody>
-            </table>    
+            </table>
         </div>
         <!-- /.row -->
     </div>

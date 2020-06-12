@@ -15,12 +15,12 @@
 	<link rel="stylesheet" type="text/css" href="admin_asset/vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="admin_asset/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="admin_asset/css/util.css">
-	<link rel="stylesheet" type="text/css" href="admin_asset/css/main.css">
+	<link rel="stylesheet" type="text/css" href="admin_asset/css/maink.css">
 </head>
 <body>
 
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('admin_asset/images/1.jpg');">
+		<div class="container-login100" style="background: #3f2e92;">
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Login user

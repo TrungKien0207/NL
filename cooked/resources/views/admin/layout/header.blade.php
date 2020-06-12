@@ -1,27 +1,20 @@
  <!-- Navigation -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; border: 0px solid #fff">
     <div class="navbar-header">
-        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button> -->
-        <a class="navbar-brand" href="/admin/layout/index" style="font-size: 2em; color: #fff"><b>Cooked Admin</b></a>
+        <a class="navbar-brand mb-4" href="./admin/User/list" style="font-size: 3em; color: #fff"><b>Cooked Admin</b></a>
     </div>
     <!-- /.navbar-header -->
-
     <ul class="nav navbar-top-links navbar-right ">
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle " data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+               <img src="https://img.icons8.com/fluent/48/000000/login-rounded-right.png" width="35px" />
             </a>
             <ul class="dropdown-menu dropdown-user container-item">
                 @if (Auth::check())
-                    <li class="dd-item"><a href="admin/User/edit/{{Auth::user()->id}}"><i class="fa fa-user fa-fw "></i> {{Auth::user()->name}}  </a>
+                    <li class="dd-item"><a href="admin/User/edit/{{Auth::user()->id}}"><img class="mr-2" src="https://img.icons8.com/bubbles/50/000000/id-short-hair-lady.png" width="30px" /> <b>{{Auth::user()->name}}</b>  </a>
                     </li>
-                    <li class="dd-item"><a href="admin/logout"><i class="fa fa-sign-out fa-fw "></i> Đăng xuất</a>
+                    <li class="dd-item"><a href="admin/logout"><img class="mr-2" src="https://img.icons8.com/clouds/100/000000/export.png" width="30px" /> Đăng xuất</a>
                     </li>
                 @endif
             </ul>

@@ -20,18 +20,18 @@
 
 		<nav><div class="clearfix h-100 p-5"></div></nav>
 
-		<nav data-aos="fade-up" data-aos-duration="3000">
-			<div class="col-sm d-block cod bd1-right bia pb-5">
+		<nav data-aos="fade-up" data-aos-duration="3000" class="mb-5">
+			<div class="col-sm d-block cod bd1-right bia p-0" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 0;">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active ">
-							<img class="d-block " src="./image/bia1.jpg" alt="First slide" style="width: 1200px; height: 500px; margin: 0 auto">
+							<img class="d-block " src="./image/bia1.jpg" alt="First slide" style="width: 1360px; height: 550px; margin: 0 auto; border-radius: 0;">
 						</div>
 						<div class="carousel-item " >
-							<img class="d-block" src="./image/20171229-094344-3.jpg" alt="Second slide" style="width: 1200px; height: 500px; margin: 0 auto">
+							<img class="d-block" src="./image/20171229-094344-3.jpg" alt="Second slide" style="width: 1360px; height: 550px; margin: 0 auto; border-radius: 0;">
 						</div>
 						<div class="carousel-item " >
-							<img class="d-block" src="./image/20171229-094443-5.jpg" alt="Three slide" style="width: 1200px; height: 500px; margin: 0 auto">
+							<img class="d-block" src="./image/20171229-094443-5.jpg" alt="Three slide" style="width: 1360px; height: 550px; margin: 0 auto; border-radius: 0;">
 						</div>
 					</div>
 					<a class="carousel-control-prev bot-left" href="#carouselExampleControls" role="button" data-slide="prev">

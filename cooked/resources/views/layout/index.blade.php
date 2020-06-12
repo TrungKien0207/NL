@@ -13,8 +13,8 @@
 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-   <link rel="stylesheet" href="{{asset('css/maino.css')}}">
-   <link rel="stylesheet" href="{{asset('css/detailq.css')}}">
+   <link rel="stylesheet" href="{{asset('css/mainy.css')}}">
+   <link rel="stylesheet" href="{{asset('css/detaile.css')}}">
 
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 
 </head>
 <body >
-   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-alt-circle-up fa-2x"></i></button>
+   <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="https://img.icons8.com/cute-clipart/64/000000/circled-chevron-up.png" width="40px;" /></button>
 
    <!-- header -->
 	@include('layout.header')

@@ -41,16 +41,16 @@
                             <td>{{$pro->tenkd}}</td>
                             <td class="bg-info">{{$pro->anh_sp}}</td>
                             <td>{{$pro->content}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/product/delete/{{$pro->id}}"> Xóa</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/product/edit/{{$pro->id}}">Sửa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="20px"/><a href="admin/product/delete/{{$pro->id}}"> Xóa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/cotton/64/000000/edit--v1.png"  width="20px"/>  <a href="admin/product/edit/{{$pro->id}}">Sửa</a></td>
                         </tr>
                     @endforeach
                 </tbody>
-            </table>    
+            </table>
         </div>
 
         <div class="row">
-            
+
             <div class="col-lg-12">
                 <h1 class="page-header">Bình luận
                     <small>Danh sách</small>
@@ -79,12 +79,12 @@
                             <td>{{$comment->contentC}}</td>
                             <td class="bg-info">{{$comment->created_at}}</td>
 
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/comment/delete/{{$comment->id}}"> Xóa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="20px"/><a href="admin/comment/delete/{{$comment->id}}"> Xóa</a></td>
                         </tr>
                     @endforeach
                     @endif
                 </tbody>
-            </table>    
+            </table>
         </div>
         <!-- /.row -->
     </div>

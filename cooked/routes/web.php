@@ -19,7 +19,7 @@ Route::get('admin/login', 'UserController@getLoginAdmin');
 Route::post('admin/login', 'UserController@postLoginAdmin');
 Route::get('admin/logout', 'UserController@getLogoutAdmin');
 
-Route::group(['prefix'=>'admin'], function() {
+Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function() {
 	Route::group(['prefix'=>'category'], function() {
 		Route::get('list', 'categoryController@getList');
 

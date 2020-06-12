@@ -53,12 +53,12 @@
                             <td>{{ $de->img4 }}</td>
                             <td>{{ $de->img5 }}</td>
                             <td>{{ $de->img6 }}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/detail/delete/{{ $de->id }}"> Xóa</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/detail/edit/{{ $de->id }}">Sửa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/fluent/48/000000/filled-trash.png" width="20px"/><a href="admin/detail/delete/{{ $de->id }}"> Xóa</a></td>
+                            <td class="center"><img src="https://img.icons8.com/cotton/64/000000/edit--v1.png"  width="20px"/> <a href="admin/detail/edit/{{ $de->id }}">Sửa</a></td>
                         </tr>
                     @endforeach
                 </tbody>
-            </table>    
+            </table>
         </div>
         <!-- /.row -->
     </div>

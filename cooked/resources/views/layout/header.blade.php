@@ -37,7 +37,7 @@
                   <div class="row">
                      @foreach($typ as $tt)
                         <div class="col-6 col-sm-4 ">
-                           <div class="nav-type justify-content-center"><a class="dropdown-item navber-link p-2 pl-3" href="{{route('get.menut.product',[$tt->tenkd,$tt->id])}}">{{$tt->ten_ty}}</a></div>
+                           <div class="nav-type justify-content-center "><a class="text-center dropdown-item navber-link p-2 pl-3" href="{{route('get.menut.product',[$tt->tenkd,$tt->id])}}">{{$tt->ten_ty}}</a></div>
                         </div>
                      @endforeach
                   </div>
@@ -54,15 +54,15 @@
       </form>
 
       <li class="nav-item dropdown " style="list-style-type: none;">
-         <a class="nav-link sign-up" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class="fas fa-sign-in-alt pr-1"></i>
+         <a class="nav-link sign-up" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><img src="https://img.icons8.com/cute-clipart/64/000000/circled-chevron-down.png" width="30px" />
          </a>
          <div class="dropdown-menu dropdown-menu-right container-item" aria-labelledby="navbarDropdown">
             @if(Auth::Check())
-               <a class="dropdown-item dd-item" href="{{route('user_edit',\Auth::user()->id)}}"><i class="fas fa-user-tie mr-2"></i><b>{{\Auth::user()->name}}</b></a>
-               <a class="dropdown-item dd-item" href="{{route('post.logout.user')}}"><i class="fas fa-sign-out-alt mr-2"></i>Đăng xuất</a>
+               <a class="dropdown-item dd-item" href="{{route('user_edit',\Auth::user()->id)}}"><img class="mr-2" src="https://img.icons8.com/bubbles/50/000000/id-short-hair-lady.png" width="40px" /><b>{{\Auth::user()->name}}</b></a>
+               <a class="dropdown-item dd-item" href="{{route('post.logout.user')}}"><img width="40px" class="mr-2" src="https://img.icons8.com/cute-clipart/64/000000/exit.png"/></i>Đăng xuất</a>
             @else
-               <a class="dropdown-item dd-item" href="login"><i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
-               <a class="dropdown-item dd-item" href="signup"><i class="far fa-address-card mr-2"></i>Đăng kí</a>
+               <a class="dropdown-item dd-item" href="login"><img width="30px" class="mr-2" src="https://img.icons8.com/cute-clipart/64/000000/enter-2.png"/>Đăng nhập</a>
+               <a class="dropdown-item dd-item" href="signup"><img width="30px" class="mr-2" src="https://img.icons8.com/dusk/64/000000/sign-up.png"/>Đăng kí</a>
             @endif
          </div>
       </li>

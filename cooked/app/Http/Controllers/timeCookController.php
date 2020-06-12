@@ -23,14 +23,14 @@ class timeCookController extends Controller
 
     public function postEdit(Request $request, $id) {
         $timeCook = timeCook::find($id);
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'name' => 'required|max:50',
                 'idProD' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-                
+
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
                 'idProD.required' => 'Bạn chưa chọn món ăn',
@@ -42,7 +42,7 @@ class timeCookController extends Controller
         $timeCook->t_tenkd = str::slug($request->name);
         $timeCook->save();
 
-        return redirect('admin/timeCook/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
+        return redirect('admin/timeCook/edit/'.$id)->with('thongbao', 'Sửa thành công.');
     }
 
     public function getInsert() {
@@ -51,15 +51,14 @@ class timeCookController extends Controller
     }
 
     public function postInsert(Request $request) {
-        // dd($request->all());
-    	$this->validate($request, 
+    	$this->validate($request,
     		[
                 'name' => 'required|max:50',
                 'idProD' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
-               
+
                 'name.max' => 'Tên món ăn phải có tối đa 50 kí tự!',
 
                 'idProD.required' => 'Bạn chưa chọn món ăn',
@@ -70,7 +69,7 @@ class timeCookController extends Controller
         $timeCook->t_ten = $request->name;
         $timeCook->t_tenkd = str::slug($request->name);
         $timeCook->save();
-        
+
 
     	return redirect('admin/timeCook/insert')->with('thongbao', 'Thêm thành công.');
     }

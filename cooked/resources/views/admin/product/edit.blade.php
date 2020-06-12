@@ -61,7 +61,7 @@
 
 					<div class="form-group">
 						<label><h4>Hình ảnh</h4></label>
-						<input type="file" class="form-control-file" name="img" value="{{old('anh_sp',isset($product->anh_sp) ? $product->anh_sp : '')}}"/>
+						<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" name="img" style="padding: 5px;" value="{{old('anh_sp',isset($product->anh_sp) ? $product->anh_sp : '')}}"/></div>
 					</div>
 
 					<div class="form-group">

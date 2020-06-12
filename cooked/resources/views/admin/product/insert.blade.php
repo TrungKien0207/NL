@@ -60,7 +60,7 @@
 					</div>
 					<div class="form-group">
 						<label><h4>Hình ảnh</h4></label>
-						<input type="file" class="form-control-file" name="img"/>
+						<div style="border: 1px solid #B8B8B8; border-radius: 5px;"><input type="file" class="form-control-file" style="padding: 5px;" name="img"/></div>
 					</div>
 					<div class="form-group">
 						<label><h4>Nội dung</h4></label>

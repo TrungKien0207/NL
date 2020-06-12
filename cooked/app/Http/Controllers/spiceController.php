@@ -23,12 +23,12 @@ class spiceController extends Controller
 
     public function postEdit(Request $request, $id) {
         $spice = spice::find($id);
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'name' => 'required|unique:spice,s_ten|min:2|max:50',
                 'idPD' => 'required',
                 's_soluong' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
                 'name.unique' => 'Tên món ăn đã tồn tại',
@@ -47,7 +47,7 @@ class spiceController extends Controller
         $spice->s_soluong = $request->s_soluong;
         $spice->save();
 
-        return redirect('admin/spice/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
+        return redirect('admin/spice/edit/'.$id)->with('thongbao', 'Sửa thành công.');
     }
 
     public function getInsert() {
@@ -56,13 +56,12 @@ class spiceController extends Controller
     }
 
     public function postInsert(Request $request) {
-        // dd($request->all());
-    	$this->validate($request, 
+    	$this->validate($request,
     		[
                 'name' => 'required|min:2|max:50',
                 'idPD' => 'required',
                 's_soluong' => 'required',
-            ], 
+            ],
             [
                 'name.required' => 'Bạn chưa nhập tên món ăn',
                 'name.min' => 'Tên món ăn phải có tối thiểu 2 kí tự!',
@@ -73,15 +72,15 @@ class spiceController extends Controller
                 's_soluong.required' => 'Bạn chưa nhập số lượng',
 
             ]);
-        
+
     	$spice = new spice();
-        
+
         $spice->idPD = $request->idPD;
         $spice->s_ten = $request->name;
         $spice->s_tenkd = str::slug($request->name);
         $spice->s_soluong = $request->s_soluong;
         $spice->save();
-        
+
 
     	return redirect('admin/spice/insert')->with('thongbao', 'Thêm thành công.');
     }

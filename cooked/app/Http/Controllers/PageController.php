@@ -50,6 +50,7 @@ class PageController extends Controller {
       $url = preg_split('/(-)/i', $url);
 
       if ($id = array_pop($url)) {
+
          $productDetails =  product::where('id',$id)->get();
          $postProduct = product::find($id);
          $getDetails = detail::where('idproduct',$id)->get();
@@ -73,7 +74,9 @@ class PageController extends Controller {
          ];
 
          return view('pages.detail', $viewdata);
+
       }
+
    }
 
    public function getListCategory(Request $request){
@@ -112,12 +115,12 @@ class PageController extends Controller {
          $productsss = product::where([
             'idType'=>$id
          ])->get();
-         // dd($type);
+
          $viewdata = [
             'type' => $type,
             'productsss' => $productsss
          ];
-         // dd($type);
+
          return view('pages.type', $viewdata);
 
       }
@@ -158,13 +161,12 @@ class PageController extends Controller {
          $productt = product::where([
             'idType'=>$id
          ])->get();
-         // dd($cate);
+
          $viewdata = [
             'typs' => $typs,
             'productt' => $productt
          ];
 
-         // dd($cate);
          return view('pages.typ', $viewdata);
 
       }
@@ -229,9 +231,9 @@ class PageController extends Controller {
          [
             'email.required' => 'Bạn chưa nhập email',
             'email.email' => 'Bạn chưa nhập đúng định dạng email',
-
             'pdag.same' => 'Mật khẩu không đúng!!',
          ]);
+
          $users->password = bcrypt($request->password);
          $users->level = $request->quyen;
       }

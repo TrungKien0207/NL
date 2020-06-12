@@ -8,9 +8,9 @@ class material extends Model
 {
 	protected $table = "material";
 
-	 // material of product
-	
+	// material of product
+
 	public function product() {
     	return $this->belongsTo('App\product', 'idProduct', 'id');
-    }
+   }
 }

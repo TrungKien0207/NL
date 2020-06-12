@@ -34,9 +34,9 @@
 						<select class="form-control" name="idPDuct" placeholder="Nhập tên món ăn">
 							<option value="">Món ăn</option>
 							@if(isset($product))
-							@foreach($product as $pro)
-							<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
-							@endforeach
+								@foreach($product as $pro)
+									<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
+								@endforeach
 							@endif
 						</select>
 					</div>

@@ -23,11 +23,11 @@ class detailController extends Controller
 
     public function postEdit(Request $request, $id) {
         $detail = detail::find($id);
-        $this->validate($request, 
+        $this->validate($request,
             [
                 'content' => 'required|min:2',
                 'idproduct' => 'required',
-            ], 
+            ],
             [
                 'content.required' => 'Bạn chưa nhập nội dung món ăn',
                 'content.min' => 'Nội dung món ăn phải có tối thiểu 2 kí tự!',
@@ -50,7 +50,7 @@ class detailController extends Controller
         $detail->img6 = $request->image6;
         $detail->save();
 
-        return redirect('admin/detail/edit/'.$id)->with('thongbao', 'Sửa thành công.'); 
+        return redirect('admin/detail/edit/'.$id)->with('thongbao', 'Sửa thành công.');
     }
 
     public function getInsert() {
@@ -60,11 +60,11 @@ class detailController extends Controller
 
     public function postInsert(Request $request) {
         // dd($request->all());
-    	$this->validate($request, 
+    	$this->validate($request,
     		[
                 'content' => 'required|unique:detail,content|min:2',
                 'idproduct' => 'required',
-            ], 
+            ],
             [
                 'content.required' => 'Bạn chưa nhập Nội dung món ăn',
                 'content.unique' => 'Nội dung món ăn đã tồn tại',
@@ -87,7 +87,6 @@ class detailController extends Controller
         $detail->img5 = $request->image5;
         $detail->img6 = $request->image6;
         $detail->save();
-        
 
     	return redirect('admin/detail/insert')->with('thongbao', 'Thêm thành công.');
     }
