@@ -3,7 +3,7 @@
 	    <div class="footer">
 	        <div class="container">
 	              <div class="row cc ">
-	                 <div class="col-sm-7 col-md-7 pt-5">
+	                 <div class="col-sm-7 col-md-7 pt-3">
 	                     <div class="row ">
 	                        <div class="col-4" >
 	                           @if(isset($cate))

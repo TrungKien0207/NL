@@ -20,7 +20,7 @@
                     <div class="intro_content">
                         <div class="first_content d-flex justify-content-center pt-4">
 
-                            @if($category)
+                            <!-- @if($category)
 
                                 <div class="d-flex pl-3">
                                 <div class="p-1 text-muted"><p>Cách thực hiện:</p></div>
@@ -32,7 +32,7 @@
                                     @endforeach
                                 </div>
 
-                            @endif
+                            @endif -->
 
                         </div>
 
@@ -142,10 +142,10 @@
                                 </div>
                             </div>
                             <div class="step_content text-justify">
-                                <p>{{$getDetail->content}}</p>
+                                <p style="font-size: 18px;">{{$getDetail->content}}</p>
 
                                 @if($getDetail->note != null)
-                                    <p class="text-muted" style="font-size: 14px;"><i class="far fa-bell pr-1"></i>{{$getDetail->note}}</p>
+                                    <p class="text-muted" style="font-size: 16px;"><img src="https://img.icons8.com/fluent/48/000000/jingle-bell.png" width="30px" />{{$getDetail->note}}</p>
                                 @endif
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                 </div>
                                 @if($commentDetails)
                                     @foreach($commentDetails as $commentDetail)
-                                        <div class="comment pl-5 pr-4">
+                                        <div class="comment pl-3 pr-4">
                                             <div class="cont pt-3 pb-1">
                                                 <div class="comment__txt pl-5" style="background-color:#fff   ; border-radius: 10px;">
                                                     <div class="d-flex ">

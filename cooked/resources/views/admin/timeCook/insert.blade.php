@@ -42,7 +42,7 @@
 					</div>
 					<div class="form-group">
 						<label><h4>Thời gian</h4></label>
-						<input class="form-control" name="name" placeholder="Nhập tên gia vị" />
+						<input class="form-control" name="name" placeholder="Nhập thời gian nấu" />
 					</div>
 
 					<button type="submit" class="btn btn-success">Thêm</button>

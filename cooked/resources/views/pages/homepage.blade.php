@@ -62,9 +62,9 @@
 										<a href="{{route('get.detail.product',[$value->tenkd,$value->id])}}">
 											<img src="image/img_product/{{$value->anh_sp}}" alt="a" alt="Lights" style="width:100%" class="hover-fade-out">
 											<div class="box_content p-3">
-												<h5>
+												<h4>
 													<b>{{isset($value->ten_sp) ? $value->ten_sp : ''}}</b>
-												</h5>
+												</h4>
 												<p>
 													{{isset($value->content) ? $value->content : ''}}
 												</p>

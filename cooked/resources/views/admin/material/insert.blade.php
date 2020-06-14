@@ -30,14 +30,14 @@
 					@csrf
 					<div class="form-group" >
 						<label id="choose"  for="option"><h4>Món ăn</h4></label>
-						<select class="form-control" name="idProduct" placeholder="Nhập tên món ăn" >
-
+						<select  class="form-control" name="idProduct" placeholder="Nhập tên món ăn" >
 							<option value="" >Món ăn</option>
 							@if(isset($product))
-							@foreach($product as $pro)
-							<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
-							@endforeach
+								@foreach($product as $pro)
+									<option value="{{$pro->id}}">{{$pro->ten_sp}}</option>
+								@endforeach
 							@endif
+
 						</select>
 					</div>
 					<div class="form-group">

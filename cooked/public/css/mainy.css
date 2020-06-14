@@ -244,7 +244,7 @@ body {
    color: #484848;
    border-bottom-left-radius: 30px;
    border-bottom-right-radius: 30px;
-   height: 120px;
+   height: 130px;
    transition: 0.2s;
 }
 
@@ -264,7 +264,7 @@ body {
    background-color: #4038A9;
    height: auto;
    clip-path: polygon(50% 0%, 75% 8%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0, 23% 8%);
-
+    margin-top: 6rem;
 }
 .col-6 .ct-name, .articles h5, .newsletter h5 {
    font-size: 1.5rem;
@@ -280,7 +280,7 @@ body {
    color: #fff;
 }
 .col-6 {
-   color: #bdb9b9;
+   color: #606060;
    font-size: 1rem;
    font-weight: 600;
 }
@@ -411,12 +411,12 @@ body {
   color: #fff;
 }
 
-.col-6{
+/*.col-6{
   color: rgb(189, 185, 185);
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-}
+}*/
 /* vdgd */
 
 .articles-list img{
@@ -462,7 +462,7 @@ body {
 .newsletter .email{
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   background-color: #fff;
-  margin: 0.5rem 14rem;
+  margin: 0.5rem 19rem;
   border-radius: 1rem;
 }
 
